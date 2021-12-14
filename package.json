@@ -14,6 +14,10 @@
     "@n8tb1t/use-scroll-position": "^2.0.3",
     "@sendgrid/mail": "^7.4.7",
     "@svgr/webpack": "^5.5.0",
+    "@types/react": "^17.0.37",
+    "@types/react-mailchimp-subscribe": "^2.1.1",
+    "@types/styled-components": "^5.1.18",
+    "@types/swiper": "^5.4.3",
     "css-in-js-media": "^2.0.1",
     "date-fns": "^2.24.0",
     "gray-matter": "^4.0.3",
@@ -33,7 +37,7 @@
     "schema-dts": "^1.0.0",
     "styled-components": "^5.3.1",
     "swiper": "7.0.7",
-    "url-loader": "^4.1.1",
+    "typescript": "4.4.2",
     "use-clipboard-copy": "^0.2.0",
     "use-resize-observer": "^8.0.0"
   },
@@ -42,10 +46,6 @@
     "@babel/eslint-parser": "7.16.5",
     "@fec/remark-a11y-emoji": "^3.1.0",
     "@next/bundle-analyzer": "12.0.7",
-    "@types/react": "^17.0.20",
-    "@types/react-mailchimp-subscribe": "^2.1.1",
-    "@types/styled-components": "^5.1.14",
-    "@types/swiper": "^5.4.3",
     "@typescript-eslint/eslint-plugin": "^4.31.0",
     "@typescript-eslint/parser": "^4.33.0",
     "all-contributors-cli": "^6.20.0",
@@ -67,7 +67,7 @@
     "remark-gfm": "^3.0.0",
     "remark-sectionize": "^1.1.1",
     "remark-slug": "^7.0.0",
-    "typescript": "4.4.2",
+    "url-loader": "^4.1.1",
     "webpack": "5.65.0"
   }
 }
