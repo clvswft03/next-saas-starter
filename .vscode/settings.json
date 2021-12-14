@@ -8,19 +8,11 @@
     "activityBar.inactiveForeground": "#15202b99",
     "activityBarBadge.background": "#c3d04f",
     "activityBarBadge.foreground": "#15202b",
-    "statusBar.background": "#c334b5",
-    "statusBar.foreground": "#e7e7e7",
-    "statusBarItem.hoverBackground": "#d258c6",
     "titleBar.activeBackground": "#c334b5",
     "titleBar.activeForeground": "#e7e7e7",
     "titleBar.inactiveBackground": "#c334b599",
     "titleBar.inactiveForeground": "#e7e7e799",
-    "editorGroup.border": "#d258c6",
-    "panel.border": "#d258c6",
-    "sash.hoverBorder": "#d258c6",
-    "sideBar.border": "#d258c6",
-    "statusBarItem.remoteBackground": "#c334b5",
-    "statusBarItem.remoteForeground": "#e7e7e7"
+    "sash.hoverBorder": "#d258c6"
   },
   "peacock.color": "#c334b5"
 }
