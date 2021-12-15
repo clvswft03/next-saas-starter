@@ -3,27 +3,30 @@ import 'swiper/css/bundle';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 
-import { AppProps } from 'next/dist/shared/lib/router/router';
+import {AppProps} from 'next/dist/shared/lib/router/router';
 import Head from 'next/head';
-import { ColorModeScript } from 'nextjs-color-mode';
-import { PropsWithChildren } from 'react';
+import {ColorModeScript} from 'nextjs-color-mode';
+import {PropsWithChildren} from 'react';
 import Footer from 'components/Footer';
-import { GlobalStyle } from 'components/GlobalStyles';
+import {GlobalStyle} from 'components/GlobalStyles';
 import Navbar from 'components/Navbar';
 import NavigationDrawer from 'components/NavigationDrawer';
 import NewsletterModal from 'components/NewsletterModal';
 import WaveCta from 'components/WaveCta';
-import { NewsletterModalContextProvider, useNewsletterModalContext } from 'contexts/newsletter-modal.context';
-import { NavItems } from 'types';
+import {
+  NewsletterModalContextProvider,
+  useNewsletterModalContext,
+} from 'contexts/newsletter-modal.context';
+import {NavItems} from 'types';
 
 const navItems: NavItems = [
-  { title: 'Awesome SaaS Features', href: '/features' },
-  { title: 'Pricing', href: '/pricing' },
-  { title: 'Contact', href: '/contact' },
-  { title: 'Sign up', href: '/sign-up', outlined: true },
+  {title: 'Awesome SaaS Features', href: '/features'},
+  {title: 'Pricing', href: '/pricing'},
+  {title: 'Contact', href: '/contact'},
+  {title: 'Sign up', href: '/sign-up', outlined: true},
 ];
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({Component, pageProps}: AppProps) {
   const standaloneMarkup = <Component {...pageProps} />;
 
   return (
@@ -55,7 +58,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-function Providers<T>({ children }: PropsWithChildren<T>) {
+function Providers<T>({children}: PropsWithChildren<T>) {
   return (
     <NewsletterModalContextProvider>
       <NavigationDrawer items={navItems}>{children}</NavigationDrawer>
@@ -64,7 +67,7 @@ function Providers<T>({ children }: PropsWithChildren<T>) {
 }
 
 function Modals() {
-  const { isModalOpened, setIsModalOpened } = useNewsletterModalContext();
+  const {isModalOpened, setIsModalOpened} = useNewsletterModalContext();
   if (!isModalOpened) {
     return null;
   }

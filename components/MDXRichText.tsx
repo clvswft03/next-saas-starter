@@ -1,6 +1,6 @@
-import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote';
+import {MDXRemote, MDXRemoteSerializeResult} from 'next-mdx-remote';
 import styled from 'styled-components';
-import { media } from 'utils/media';
+import {media} from 'utils/media';
 import ArticleImage from './ArticleImage';
 import Code from './Code';
 import Link from './Link';

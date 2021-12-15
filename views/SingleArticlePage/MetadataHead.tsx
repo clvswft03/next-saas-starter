@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
-import { EnvVars } from 'env';
+import {EnvVars} from 'env';
 
 interface MetadataHeadProps {
   title: string;
@@ -9,7 +9,7 @@ interface MetadataHeadProps {
 }
 
 export default function MetadataHead(props: MetadataHeadProps) {
-  const { title, description, author } = props;
+  const {title, description, author} = props;
 
   return (
     <Head>

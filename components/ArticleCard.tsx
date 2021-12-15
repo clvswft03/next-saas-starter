@@ -1,7 +1,7 @@
 import NextImage from 'next/image';
 import NextLink from 'next/link';
 import styled from 'styled-components';
-import { media } from 'utils/media';
+import {media} from 'utils/media';
 
 export interface ArticleCardProps {
   title: string;
@@ -10,7 +10,12 @@ export interface ArticleCardProps {
   description: string;
 }
 
-export default function ArticleCard({ title, slug, imageUrl, description }: ArticleCardProps) {
+export default function ArticleCard({
+  title,
+  slug,
+  imageUrl,
+  description,
+}: ArticleCardProps) {
   return (
     <NextLink href={'/blog/' + slug} passHref>
       <ArticleCardWrapper className="article-card-wrapper">

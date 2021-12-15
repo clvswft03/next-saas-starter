@@ -1,12 +1,12 @@
 import NextImage from 'next/image';
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import Collapse from 'components/Collapse';
 import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
 import SectionTitle from 'components/SectionTitle';
 import ThreeLayersCircle from 'components/ThreeLayersCircle';
-import { media } from 'utils/media';
+import {media} from 'utils/media';
 
 const TABS = [
   {
@@ -44,7 +44,13 @@ export default function FeaturesGallery() {
 
     return (
       <ImageContainer key={singleTab.title} isActive={isActive}>
-        <NextImage src={singleTab.imageUrl} alt={singleTab.title} layout="fill" objectFit="contain" priority={isFirst} />
+        <NextImage
+          src={singleTab.imageUrl}
+          alt={singleTab.title}
+          layout="fill"
+          objectFit="contain"
+          priority={isFirst}
+        />
       </ImageContainer>
     );
   });
@@ -56,13 +62,16 @@ export default function FeaturesGallery() {
       <Tab isActive={isActive} key={idx} onClick={() => handleTabClick(idx)}>
         <TabTitleContainer>
           <CircleContainer>
-            <ThreeLayersCircle baseColor={isActive ? 'transparent' : singleTab.baseColor} secondColor={singleTab.secondColor} />
+            <ThreeLayersCircle
+              baseColor={isActive ? 'transparent' : singleTab.baseColor}
+              secondColor={singleTab.secondColor}
+            />
           </CircleContainer>
           <h4>{singleTab.title}</h4>
         </TabTitleContainer>
         <Collapse isOpen={isActive} duration={300}>
           <TabContent>
-            <div dangerouslySetInnerHTML={{ __html: singleTab.description }}></div>
+            <div dangerouslySetInnerHTML={{__html: singleTab.description}}></div>
           </TabContent>
         </Collapse>
       </Tab>
@@ -126,7 +135,7 @@ const TabsContainer = styled.div`
   }
 `;
 
-const ImageContainer = styled.div<{ isActive: boolean }>`
+const ImageContainer = styled.div<{isActive: boolean}>`
   position: relative;
   overflow: hidden;
   border-radius: 0.8rem;
@@ -153,7 +162,7 @@ const ImageContainer = styled.div<{ isActive: boolean }>`
   }
 `;
 
-const Tab = styled.div<{ isActive: boolean }>`
+const Tab = styled.div<{isActive: boolean}>`
   display: flex;
   flex-direction: column;
   padding: 2rem 1.5rem;

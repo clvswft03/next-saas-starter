@@ -1,4 +1,4 @@
-import { forwardRef, PropsWithChildren } from 'react';
+import {forwardRef, PropsWithChildren} from 'react';
 import AnimateHeight from 'react-animate-height';
 
 export interface CollapseProps {
@@ -34,9 +34,10 @@ const Collapse = forwardRef<HTMLDivElement, PropsWithChildren<CollapseProps>>(
         animateOpacity={animateOpacity}
         height={isOpen ? endingHeight : startingHeight}
         applyInlineTransitions={false}
-        {...{ onAnimationStart, onAnimationEnd }}
+        {...{onAnimationStart, onAnimationEnd}}
         style={{
-          transition: 'height .3s ease,opacity .3s ease-in-out,transform .3s ease-in-out',
+          transition:
+            'height .3s ease,opacity .3s ease-in-out,transform .3s ease-in-out',
           backfaceVisibility: 'hidden',
         }}
       >

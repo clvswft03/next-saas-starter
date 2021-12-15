@@ -31,7 +31,6 @@
 <p align="center"><b>Created with :heart:  at Blazity </b></p>
 <p align="center"><a href="https://blazity.com/">Blazity</a> is a group of Next.js/Jamstack/Headless experts. Contact us at <a href="mailto:contact@blazity.com">contact@blazity.com</a> if you’d like to talk about your project or just to have a chat with us :grin:</p>
 
-
 ## Table Of Contents
 
 - [Table Of Contents](#table-of-contents)
@@ -67,7 +66,7 @@
 
 ```
 # run the dev mode
-$ yarn dev 
+$ yarn dev
 
 # run the prod mode
 yarn start
@@ -85,8 +84,6 @@ Clone the repository and one-click deploy to Vercel for free!
 Clone the repository and one-click deploy to Netlify for free!
 
 [![Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Blazity/next-saas-starter)
-
-
 
 ## 🧰 Built With
 
@@ -113,7 +110,8 @@ Contributions are what make the open source community such an amazing place to b
 ## 😎 Acknowledgements
 
 Big thanks to authors of these libraries:
-- https://github.com/neg4n/next-api-og-image - generating open graph images 
+
+- https://github.com/neg4n/next-api-og-image - generating open graph images
 - https://github.com/blazity/nextjs-color-mode - non-flickering dark mode
 - https://github.com/Brew-Brew/css-in-js-media - a convenient way of creating media queries
 

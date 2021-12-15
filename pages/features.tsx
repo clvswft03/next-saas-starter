@@ -4,7 +4,7 @@ import BasicCard from 'components/BasicCard';
 import Page from 'components/Page';
 import SectionTitle from 'components/SectionTitle';
 import YoutubeVideo from 'components/YoutubeVideo';
-import { media } from 'utils/media';
+import {media} from 'utils/media';
 
 const FEATURES = [
   {
@@ -65,7 +65,10 @@ const FEATURES = [
 
 export default function FeaturesPage() {
   return (
-    <Page title="Features" description="Elit aute do nisi Lorem id ea culpa sint duis eu tempor dolore elit.">
+    <Page
+      title="Features"
+      description="Elit aute do nisi Lorem id ea culpa sint duis eu tempor dolore elit."
+    >
       <Wrapper>
         <SectionTitle>Check out this quick introduction</SectionTitle>
         <YoutubeVideo url="https://www.youtube.com/watch?v=BggrpKfqh1c" />

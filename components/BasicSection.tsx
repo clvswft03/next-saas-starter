@@ -1,7 +1,7 @@
 import NextImage from 'next/image';
-import React, { PropsWithChildren } from 'react';
+import React, {PropsWithChildren} from 'react';
 import styled from 'styled-components';
-import { media } from 'utils/media';
+import {media} from 'utils/media';
 import Container from './Container';
 import OverTitle from './OverTitle';
 import RichText from './RichText';
@@ -13,7 +13,13 @@ export interface BasicSectionProps {
   reversed?: boolean;
 }
 
-export default function BasicSection({ imageUrl, title, overTitle, reversed, children }: PropsWithChildren<BasicSectionProps>) {
+export default function BasicSection({
+  imageUrl,
+  title,
+  overTitle,
+  reversed,
+  children,
+}: PropsWithChildren<BasicSectionProps>) {
   return (
     <BasicSectionWrapper reversed={reversed}>
       <ImageContainer>

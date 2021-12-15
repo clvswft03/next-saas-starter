@@ -1,6 +1,6 @@
-import { PropsWithChildren } from 'react';
+import {PropsWithChildren} from 'react';
 import styled from 'styled-components';
-import { media } from 'utils/media';
+import {media} from 'utils/media';
 import Button from './Button';
 import RichText from './RichText';
 
@@ -11,7 +11,13 @@ interface PricingCardProps {
   isOutlined?: boolean;
 }
 
-export default function PricingCard({ title, description, benefits, isOutlined, children }: PropsWithChildren<PricingCardProps>) {
+export default function PricingCard({
+  title,
+  description,
+  benefits,
+  isOutlined,
+  children,
+}: PropsWithChildren<PricingCardProps>) {
   const isAnyBenefitPresent = benefits?.length;
 
   return (
@@ -35,7 +41,7 @@ export default function PricingCard({ title, description, benefits, isOutlined, 
   );
 }
 
-const Wrapper = styled.div<{ isOutlined?: boolean }>`
+const Wrapper = styled.div<{isOutlined?: boolean}>`
   display: flex;
   flex-direction: column;
   padding: 3rem;

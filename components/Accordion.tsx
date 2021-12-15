@@ -1,6 +1,6 @@
-import { PropsWithChildren, useState } from 'react';
+import {PropsWithChildren, useState} from 'react';
 import styled from 'styled-components';
-import { media } from 'utils/media';
+import {media} from 'utils/media';
 import Collapse from './Collapse';
 import RichText from './RichText';
 
@@ -9,7 +9,11 @@ interface AccordionProps {
   isOpen?: boolean;
 }
 
-export default function Accordion({ title, isOpen, children }: PropsWithChildren<AccordionProps>) {
+export default function Accordion({
+  title,
+  isOpen,
+  children,
+}: PropsWithChildren<AccordionProps>) {
   const [hasCollapsed, setHasCollapsed] = useState(!isOpen);
   const isActive = !hasCollapsed;
   return (
@@ -24,7 +28,10 @@ export default function Accordion({ title, isOpen, children }: PropsWithChildren
             aria-hidden="true"
             preserveAspectRatio="none"
           >
-            <path fill="currentColor" d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
+            <path
+              fill="currentColor"
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            ></path>
           </svg>
         </Icon>
       </TitleWrapper>
@@ -53,7 +60,7 @@ const TitleWrapper = styled.div`
   align-items: center;
 `;
 
-const Icon = styled.div<{ isActive: boolean }>`
+const Icon = styled.div<{isActive: boolean}>`
   width: 2.4rem;
   transition: transform 0.3s;
   transform: rotateZ(${(p) => (p.isActive ? 180 : 0)}deg);

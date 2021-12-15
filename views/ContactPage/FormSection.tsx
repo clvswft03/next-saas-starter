@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import {useState} from 'react';
+import {useForm} from 'react-hook-form';
 import styled from 'styled-components';
 import Button from 'components/Button';
 import Input from 'components/Input';
-import { media } from 'utils/media';
+import {media} from 'utils/media';
 import MailSentState from '../../components/MailSentState';
 
 interface EmailPayload {
@@ -15,8 +15,8 @@ interface EmailPayload {
 export default function FormSection() {
   const [hasSuccessfullySentMail, setHasSuccessfullySentMail] = useState(false);
   const [hasErrored, setHasErrored] = useState(false);
-  const { register, handleSubmit, formState } = useForm();
-  const { isSubmitSuccessful, isSubmitting, isSubmitted, errors } = formState;
+  const {register, handleSubmit, formState} = useForm();
+  const {isSubmitSuccessful, isSubmitting, isSubmitted, errors} = formState;
 
   async function onSubmit(payload: EmailPayload) {
     try {
@@ -25,7 +25,7 @@ export default function FormSection() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ subject: 'Email from contact form', ...payload }),
+        body: JSON.stringify({subject: 'Email from contact form', ...payload}),
       });
 
       if (res.status !== 204) {
@@ -50,15 +50,27 @@ export default function FormSection() {
   return (
     <Wrapper>
       <Form onSubmit={handleSubmit(onSubmit)}>
-        {hasErrored && <ErrorMessage>Couldn&apos;t send email. Please try again.</ErrorMessage>}
+        {hasErrored && (
+          <ErrorMessage>Couldn&apos;t send email. Please try again.</ErrorMessage>
+        )}
         <InputGroup>
           <InputStack>
             {errors.name && <ErrorMessage>Name is required</ErrorMessage>}
-            <Input placeholder="Your Name" id="name" disabled={isDisabled} {...register('name', { required: true })} />
+            <Input
+              placeholder="Your Name"
+              id="name"
+              disabled={isDisabled}
+              {...register('name', {required: true})}
+            />
           </InputStack>
           <InputStack>
             {errors.email && <ErrorMessage>Email is required</ErrorMessage>}
-            <Input placeholder="Your Email" id="email" disabled={isDisabled} {...register('email', { required: true })} />
+            <Input
+              placeholder="Your Email"
+              id="email"
+              disabled={isDisabled}
+              {...register('email', {required: true})}
+            />
           </InputStack>
         </InputGroup>
         <InputStack>
@@ -68,7 +80,7 @@ export default function FormSection() {
             placeholder="Enter Your Message..."
             id="description"
             disabled={isDisabled}
-            {...register('description', { required: true })}
+            {...register('description', {required: true})}
           />
         </InputStack>
         <Button as="button" type="submit" disabled={isSubmitDisabled}>

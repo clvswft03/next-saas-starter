@@ -4,15 +4,19 @@ import Button from 'components/Button';
 import ButtonGroup from 'components/ButtonGroup';
 import Container from 'components/Container';
 import SectionTitle from 'components/SectionTitle';
-import { useNewsletterModalContext } from 'contexts/newsletter-modal.context';
-import { media } from 'utils/media';
+import {useNewsletterModalContext} from 'contexts/newsletter-modal.context';
+import {media} from 'utils/media';
 
 export default function WaveCta() {
-  const { setIsModalOpened } = useNewsletterModalContext();
+  const {setIsModalOpened} = useNewsletterModalContext();
 
   return (
     <>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        preserveAspectRatio="none"
+      >
         <path
           fill="#0A121E"
           fillOpacity="1"
@@ -21,7 +25,10 @@ export default function WaveCta() {
       </svg>
       <CtaWrapper>
         <Container>
-          <Title>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus delectus?</Title>
+          <Title>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus
+            delectus?
+          </Title>
           <CustomButtonGroup>
             <Button onClick={() => setIsModalOpened(true)}>
               Subscribe to the newsletter <span>&rarr;</span>

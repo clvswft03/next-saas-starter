@@ -19,7 +19,14 @@ export default function PricingTablesSection() {
         <PricingCard
           title="Starter"
           description="Best for individual desginers"
-          benefits={['1 seat', '3 active project', 'Ulimited viewers', '100 blocks', 'CSV Downloader', 'Password protection']}
+          benefits={[
+            '1 seat',
+            '3 active project',
+            'Ulimited viewers',
+            '100 blocks',
+            'CSV Downloader',
+            'Password protection',
+          ]}
           isOutlined
         >
           $29<span>/month</span>
