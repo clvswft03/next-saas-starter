@@ -1,22 +1,24 @@
-import { GetStaticPropsContext, InferGetStaticPropsType } from 'next';
+import {GetStaticPropsContext, InferGetStaticPropsType} from 'next';
 import Head from 'next/head';
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import Container from 'components/Container';
 import MDXRichText from 'components/MDXRichText';
-import { formatDate } from 'utils/formatDate';
-import { media } from 'utils/media';
-import { getAllPostsSlugs, getSinglePost } from 'utils/postsFetcher';
-import { getReadTime } from 'utils/readTime';
+import {formatDate} from 'utils/formatDate';
+import {media} from 'utils/media';
+import {getAllPostsSlugs, getSinglePost} from 'utils/postsFetcher';
+import {getReadTime} from 'utils/readTime';
 import Header from 'views/SingleArticlePage/Header';
 import MetadataHead from 'views/SingleArticlePage/MetadataHead';
 import OpenGraphHead from 'views/SingleArticlePage/OpenGraphHead';
 import ShareWidget from 'views/SingleArticlePage/ShareWidget';
 import StructuredDataHead from 'views/SingleArticlePage/StructuredDataHead';
 
-export default function SingleArticlePage(props: InferGetStaticPropsType<typeof getStaticProps>) {
-  const { slug, content, meta, readTime } = props;
-  const { title, date, imageUrl } = meta;
+export default function SingleArticlePage(
+  props: InferGetStaticPropsType<typeof getStaticProps>,
+) {
+  const {slug, content, meta, readTime} = props;
+  const {title, date, imageUrl} = meta;
 
   const formattedDate = formatDate(new Date(date));
 
@@ -53,7 +55,12 @@ export default function SingleArticlePage(props: InferGetStaticPropsType<typeof 
       <MetadataHead {...meta} />
       <CustomContainer id="content">
         <ShareWidget title={title} slug={slug} />
-        <Header title={title} formattedDate={formattedDate} imageUrl={imageUrl} readTime={readTime} />
+        <Header
+          title={title}
+          formattedDate={formattedDate}
+          imageUrl={imageUrl}
+          readTime={readTime}
+        />
         <MDXRichText {...content} />
       </CustomContainer>
     </>
@@ -63,20 +70,22 @@ export default function SingleArticlePage(props: InferGetStaticPropsType<typeof 
 export async function getStaticPaths() {
   const posts = getAllPostsSlugs();
   return {
-    paths: posts.map((slug) => ({ params: { slug } })),
+    paths: posts.map((slug) => ({params: {slug}})),
     fallback: false,
   };
 }
 
-export async function getStaticProps({ params }: GetStaticPropsContext<{ slug: string }>) {
+export async function getStaticProps({params}: GetStaticPropsContext<{slug: string}>) {
   if (params) {
-    const { slug, content, meta } = await getSinglePost(params.slug);
+    const {slug, content, meta} = await getSinglePost(params.slug);
     const serializedContent = await serializeContent(content, meta);
-    return { props: { slug, content: serializedContent, meta, readTime: getReadTime(content) } };
+    return {
+      props: {slug, content: serializedContent, meta, readTime: getReadTime(content)},
+    };
   }
 
   async function serializeContent(content: string, meta: Record<string, unknown>) {
-    const { serialize } = await import('next-mdx-remote/serialize');
+    const {serialize} = await import('next-mdx-remote/serialize');
     return serialize(content, {
       scope: meta,
       mdxOptions: {

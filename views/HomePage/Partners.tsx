@@ -1,10 +1,10 @@
 import NextImage from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
-import { Autoplay } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {Autoplay} from 'swiper';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import Container from 'components/Container';
-import { media } from 'utils/media';
+import {media} from 'utils/media';
 
 const PARTNER_LOGOS = [
   'logoipsum-logo-1.svg',
@@ -25,18 +25,29 @@ export default function Partners() {
         slidesPerView={6}
         spaceBetween={30}
         loop={true}
-        autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: false, waitForTransition: false, stopOnLastSlide: false }}
+        autoplay={{
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: false,
+          waitForTransition: false,
+          stopOnLastSlide: false,
+        }}
         speed={3000}
         breakpoints={{
-          320: { slidesPerView: 2 },
-          768: { slidesPerView: 4 },
-          1025: { slidesPerView: 6 },
+          320: {slidesPerView: 2},
+          768: {slidesPerView: 4},
+          1025: {slidesPerView: 6},
         }}
         className="swiper-wrapper"
       >
         {PARTNER_LOGOS.map((logo) => (
           <SwiperSlide key={logo}>
-            <NextImage src={'/partners/' + logo} alt={normalizePartnerLogoName(logo)} width={128} height={128} />
+            <NextImage
+              src={'/partners/' + logo}
+              alt={normalizePartnerLogoName(logo)}
+              width={128}
+              height={128}
+            />
           </SwiperSlide>
         ))}
       </Swiper>

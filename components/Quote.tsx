@@ -7,10 +7,10 @@ interface QuoteProps {
   cite: string;
 }
 
-export default function Quote({ content, author, cite }: QuoteProps) {
+export default function Quote({content, author, cite}: QuoteProps) {
   return (
     <Container>
-      <Blockquote {...(cite && { cite })}>{content}</Blockquote>
+      <Blockquote {...(cite && {cite})}>{content}</Blockquote>
       <Caption>— {author}</Caption>
     </Container>
   );

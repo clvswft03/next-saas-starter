@@ -1,13 +1,13 @@
-import { useCallback, useEffect } from 'react';
+import {useCallback, useEffect} from 'react';
 
 export interface UseEscCloseProps {
   onClose: () => void;
 }
 
-export default function useEscClose({ onClose }: UseEscCloseProps) {
+export default function useEscClose({onClose}: UseEscCloseProps) {
   const handleUserKeyPress = useCallback(
     (event) => {
-      const { keyCode } = event;
+      const {keyCode} = event;
       const escapeKeyCode = 27;
       if (keyCode === escapeKeyCode) {
         onClose();

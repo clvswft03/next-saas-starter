@@ -1,12 +1,12 @@
 import NextLink from 'next/link';
-import { PropsWithChildren } from 'react';
+import {PropsWithChildren} from 'react';
 import styled from 'styled-components';
 
 export interface LinkProps {
   href: string;
 }
 
-export default function Link({ href, children }: PropsWithChildren<LinkProps>) {
+export default function Link({href, children}: PropsWithChildren<LinkProps>) {
   return (
     <NextLink href={href} passHref>
       <Anchor>{children}</Anchor>

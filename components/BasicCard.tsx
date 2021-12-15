@@ -7,7 +7,7 @@ interface BasicCardProps {
   imageUrl: string;
 }
 
-export default function BasicCard({ title, description, imageUrl }: BasicCardProps) {
+export default function BasicCard({title, description, imageUrl}: BasicCardProps) {
   return (
     <Card>
       <NextImage src={imageUrl} width={128} height={128} alt={title} />

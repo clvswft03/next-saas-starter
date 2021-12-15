@@ -1,22 +1,22 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 import styled from 'styled-components';
-import { A11y } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {A11y} from 'swiper';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import ArticleCard from 'components/ArticleCard';
 import Container from 'components/Container';
 import OverTitle from 'components/OverTitle';
 import SectionTitle from 'components/SectionTitle';
-import { useResizeObserver } from 'hooks/useResizeObserver';
-import { SingleArticle } from 'types';
-import { media } from 'utils/media';
+import {useResizeObserver} from 'hooks/useResizeObserver';
+import {SingleArticle} from 'types';
+import {media} from 'utils/media';
 
 interface ScrollableBlogPostsProps {
   posts: SingleArticle[];
 }
 
-export default function ScrollableBlogPosts({ posts }: ScrollableBlogPostsProps) {
+export default function ScrollableBlogPosts({posts}: ScrollableBlogPostsProps) {
   const [hasMounted, setHasMounted] = useState(false);
-  const { ref, width = 1 } = useResizeObserver<HTMLDivElement>();
+  const {ref, width = 1} = useResizeObserver<HTMLDivElement>();
 
   const oneItemWidth = 350;
   const noOfItems = width / oneItemWidth;

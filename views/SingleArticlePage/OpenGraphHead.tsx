@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
-import { EnvVars } from 'env';
+import {EnvVars} from 'env';
 
 interface OpenGraphHeadProps {
   slug: string;
@@ -12,7 +12,7 @@ interface OpenGraphHeadProps {
 }
 
 export default function OpenGraphHead(props: OpenGraphHeadProps) {
-  const { slug, title, description, date, tags } = props;
+  const {slug, title, description, date, tags} = props;
 
   const currentUrl = EnvVars.URL + 'blog/' + slug;
   const ogImageUrl = EnvVars.OG_IMAGES_URL + `${slug}.png`;

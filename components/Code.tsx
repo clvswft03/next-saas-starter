@@ -1,8 +1,8 @@
-import Highlight, { defaultProps, Language } from 'prism-react-renderer';
+import Highlight, {defaultProps, Language} from 'prism-react-renderer';
 import React from 'react';
 import styled from 'styled-components';
 import ClientOnly from 'components/ClientOnly';
-import { useClipboard } from 'hooks/useClipboard';
+import {useClipboard} from 'hooks/useClipboard';
 
 export interface CodeProps {
   code: string;
@@ -21,7 +21,7 @@ export default function Code({
   withLineNumbers,
   caption,
 }: CodeProps) {
-  const { copy, copied } = useClipboard({
+  const {copy, copied} = useClipboard({
     copiedTimeout: 600,
   });
 
@@ -40,7 +40,7 @@ export default function Code({
   return (
     <>
       <Highlight {...defaultProps} theme={undefined} code={code} language={language}>
-        {({ className, style, tokens, getLineProps, getTokenProps }) => (
+        {({className, style, tokens, getLineProps, getTokenProps}) => (
           <>
             <CodeWrapper className="code-wrapper" language={language}>
               {withCopyButton && copyButtonMarkup}
@@ -48,15 +48,16 @@ export default function Code({
                 {tokens.map((line, i) => {
                   const lineNumber = i + 1;
                   const isSelected = selectedLines.includes(lineNumber);
-                  const lineProps = getLineProps({ line, key: i });
-                  const className = lineProps.className + (isSelected ? ' selected-line' : '');
+                  const lineProps = getLineProps({line, key: i});
+                  const className =
+                    lineProps.className + (isSelected ? ' selected-line' : '');
 
                   return (
-                    <Line key={i} {...{ ...lineProps, className }}>
+                    <Line key={i} {...{...lineProps, className}}>
                       {withLineNumbers && <LineNo>{lineNumber}</LineNo>}
                       <LineContent>
                         {line.map((token, key) => (
-                          <span key={key} {...getTokenProps({ token, key })} />
+                          <span key={key} {...getTokenProps({token, key})} />
                         ))}
                       </LineContent>
                     </Line>
@@ -90,7 +91,7 @@ const Caption = styled.small`
   font-size: 1.2rem;
 `;
 
-const CopyButton = styled.button<{ copied: boolean }>`
+const CopyButton = styled.button<{copied: boolean}>`
   position: absolute;
   border: none;
   top: 2.4rem;
@@ -127,7 +128,7 @@ const CopyButton = styled.button<{ copied: boolean }>`
   }
 `;
 
-const CodeWrapper = styled.div<{ language: string }>`
+const CodeWrapper = styled.div<{language: string}>`
   position: relative;
   border-radius: 0.3em;
   margin-top: 4.5rem;

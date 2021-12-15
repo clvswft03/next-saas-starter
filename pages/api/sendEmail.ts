@@ -1,11 +1,11 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import {NextApiRequest, NextApiResponse} from 'next';
 
 const sgMail = require('@sendgrid/mail');
 
 export default async function SendEmail(req: NextApiRequest, res: NextApiResponse) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-  const { subject, description, email, name } = req.body;
+  const {subject, description, email, name} = req.body;
   const referer = req.headers.referer;
 
   const content = {
@@ -25,6 +25,6 @@ export default async function SendEmail(req: NextApiRequest, res: NextApiRespons
     res.status(204).end();
   } catch (error) {
     console.log('ERROR', error);
-    res.status(400).send({ message: error });
+    res.status(400).send({message: error});
   }
 }

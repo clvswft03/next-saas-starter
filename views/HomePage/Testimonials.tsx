@@ -2,11 +2,11 @@ import NextImage from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 
-import { A11y, Autoplay, Navigation } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import {A11y, Autoplay, Navigation} from 'swiper';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import Container from 'components/Container';
 import Separator from 'components/Separator';
-import { media } from 'utils/media';
+import {media} from 'utils/media';
 
 const TESTIMONIALS = [
   {
@@ -43,7 +43,14 @@ export default function Testimonials() {
     <div>
       <Separator />
       <TestimonialsWrapper>
-        <Swiper modules={[Navigation, Autoplay, A11y]} slidesPerView={1} autoplay={{ delay: 8000 }} centeredSlides navigation loop>
+        <Swiper
+          modules={[Navigation, Autoplay, A11y]}
+          slidesPerView={1}
+          autoplay={{delay: 8000}}
+          centeredSlides
+          navigation
+          loop
+        >
           {TESTIMONIALS.map((singleTestimonial, idx) => (
             <SwiperSlide key={idx}>
               <TestimonialCard>
@@ -56,7 +63,12 @@ export default function Testimonials() {
                 <Content>“{singleTestimonial.content}”</Content>
                 <AuthorContainer>
                   <AuthorImageContainer>
-                    <NextImage src={singleTestimonial.author.avatarUrl} alt={singleTestimonial.author.name} width={48} height={48} />
+                    <NextImage
+                      src={singleTestimonial.author.avatarUrl}
+                      alt={singleTestimonial.author.name}
+                      width={48}
+                      height={48}
+                    />
                   </AuthorImageContainer>
                   <AuthorContent>
                     <AuthorName>{singleTestimonial.author.name}</AuthorName>

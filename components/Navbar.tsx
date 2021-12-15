@@ -1,28 +1,31 @@
 import dynamic from 'next/dynamic';
 import NextLink from 'next/link';
-import { useRouter } from 'next/router';
-import React, { useRef, useState } from 'react';
+import {useRouter} from 'next/router';
+import React, {useRef, useState} from 'react';
 import styled from 'styled-components';
-import { useNewsletterModalContext } from 'contexts/newsletter-modal.context';
-import { ScrollPositionEffectProps, useScrollPosition } from 'hooks/useScrollPosition';
-import { NavItems, SingleNavItem } from 'types';
-import { media } from 'utils/media';
+import {useNewsletterModalContext} from 'contexts/newsletter-modal.context';
+import {ScrollPositionEffectProps, useScrollPosition} from 'hooks/useScrollPosition';
+import {NavItems, SingleNavItem} from 'types';
+import {media} from 'utils/media';
 import Button from './Button';
 import Container from './Container';
 import Drawer from './Drawer';
-import { HamburgerIcon } from './HamburgerIcon';
+import {HamburgerIcon} from './HamburgerIcon';
 import Logo from './Logo';
 
-const ColorSwitcher = dynamic(() => import('../components/ColorSwitcher'), { ssr: false });
+const ColorSwitcher = dynamic(() => import('../components/ColorSwitcher'), {
+  ssr: false,
+});
 
-type NavbarProps = { items: NavItems };
+type NavbarProps = {items: NavItems};
 type ScrollingDirections = 'up' | 'down' | 'none';
-type NavbarContainerProps = { hidden: boolean; transparent: boolean };
+type NavbarContainerProps = {hidden: boolean; transparent: boolean};
 
-export default function Navbar({ items }: NavbarProps) {
+export default function Navbar({items}: NavbarProps) {
   const router = useRouter();
-  const { toggle } = Drawer.useDrawer();
-  const [scrollingDirection, setScrollingDirection] = useState<ScrollingDirections>('none');
+  const {toggle} = Drawer.useDrawer();
+  const [scrollingDirection, setScrollingDirection] =
+    useState<ScrollingDirections>('none');
 
   let lastScrollY = useRef(0);
   const lastRoute = useRef('');
@@ -30,7 +33,7 @@ export default function Navbar({ items }: NavbarProps) {
 
   useScrollPosition(scrollPositionCallback, [router.asPath], undefined, undefined, 50);
 
-  function scrollPositionCallback({ currPos }: ScrollPositionEffectProps) {
+  function scrollPositionCallback({currPos}: ScrollPositionEffectProps) {
     const routerPath = router.asPath;
     const hasRouteChanged = routerPath !== lastRoute.current;
 
@@ -88,8 +91,8 @@ export default function Navbar({ items }: NavbarProps) {
   );
 }
 
-function NavItem({ href, title, outlined }: SingleNavItem) {
-  const { setIsModalOpened } = useNewsletterModalContext();
+function NavItem({href, title, outlined}: SingleNavItem) {
+  const {setIsModalOpened} = useNewsletterModalContext();
 
   function showNewsletterModal() {
     setIsModalOpened(true);
@@ -144,13 +147,15 @@ const NavItemWrapper = styled.li<Partial<SingleNavItem>>`
   line-height: 2;
 
   &:hover {
-    background-color: ${(p) => (p.outlined ? 'rgb(var(--primary), 0.8)' : 'transparent')};
+    background-color: ${(p) =>
+      p.outlined ? 'rgb(var(--primary), 0.8)' : 'transparent'};
     transition: background-color 0.2s;
   }
 
   a {
     display: flex;
-    color: ${(p) => (p.outlined ? 'rgb(var(--textSecondary))' : 'rgb(var(--text), 0.75)')};
+    color: ${(p) =>
+      p.outlined ? 'rgb(var(--textSecondary))' : 'rgb(var(--text), 0.75)'};
     letter-spacing: 0.025em;
     text-decoration: none;
     padding: 0.75rem 1.5rem;
@@ -174,7 +179,10 @@ const NavbarContainer = styled.div<NavbarContainerProps>`
   background-color: rgb(var(--navbarBackground));
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%);
   visibility: ${(p) => (p.hidden ? 'hidden' : 'visible')};
-  transform: ${(p) => (p.hidden ? `translateY(-8rem) translateZ(0) scale(1)` : 'translateY(0) translateZ(0) scale(1)')};
+  transform: ${(p) =>
+    p.hidden
+      ? `translateY(-8rem) translateZ(0) scale(1)`
+      : 'translateY(0) translateZ(0) scale(1)'};
 
   transition-property: transform, visibility, height, box-shadow, background-color;
   transition-duration: 0.15s;
