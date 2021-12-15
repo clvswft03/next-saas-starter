@@ -1,7 +1,19 @@
 export default function Logo({ ...rest }) {
   return (
-    <svg id="logo-34" width="155" height="40" viewBox="0 0 155 40" fill="none" xmlns="http://www.w3.org/2000/svg" {...rest}>
-      <path d="M51.5821 10.2839H48V26.4472H57.9164V23.2801H51.5821V10.2839Z" className="ccustom" fill="currentColor"></path>
+    <svg
+      id="logo-34"
+      width="155"
+      height="40"
+      viewBox="0 0 155 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...rest}
+    >
+      <path
+        d="M51.5821 10.2839H48V26.4472H57.9164V23.2801H51.5821V10.2839Z"
+        className="ccustom"
+        fill="currentColor"
+      ></path>
       <path
         d="M58.2585 20.9648C58.2585 24.4159 60.5738 26.7093 64.0685 26.7093C67.5414 26.7093 69.8567 24.4159 69.8567 20.9648C69.8567 17.5137 67.5414 15.1984 64.0685 15.1984C60.5738 15.1984 58.2585 17.5137 58.2585 20.9648ZM61.644 20.9429C61.644 19.3048 62.6051 18.2127 64.0685 18.2127C65.5101 18.2127 66.4712 19.3048 66.4712 20.9429C66.4712 22.603 65.5101 23.6951 64.0685 23.6951C62.6051 23.6951 61.644 22.603 61.644 20.9429Z"
         className="ccustom"

@@ -26,28 +26,28 @@ export default function StructuredDataHead(props: StructuredDataHeadProps) {
         {...jsonLdScriptProps<TechArticle>({
           '@context': 'https://schema.org',
           '@type': 'TechArticle',
-          mainEntityOfPage: `${currentSiteUrl}#content`,
-          headline: title,
-          datePublished: date,
-          dateModified: date,
-          author: {
+          'mainEntityOfPage': `${currentSiteUrl}#content`,
+          'headline': title,
+          'datePublished': date,
+          'dateModified': date,
+          'author': {
             '@type': 'Person',
-            name: author,
+            'name': author,
           },
-          description: description,
-          dependencies: tags,
-          proficiencyLevel: 'Beginner',
-          publisher: {
+          'description': description,
+          'dependencies': tags,
+          'proficiencyLevel': 'Beginner',
+          'publisher': {
             '@type': 'Organization',
-            name: domainName,
-            logo: {
+            'name': domainName,
+            'logo': {
               '@type': 'ImageObject',
-              url: logoUrl,
+              'url': logoUrl,
             },
           },
-          image: {
+          'image': {
             '@type': 'ImageObject',
-            url: ogImageUrl,
+            'url': ogImageUrl,
           },
         })}
       />
@@ -56,9 +56,9 @@ export default function StructuredDataHead(props: StructuredDataHeadProps) {
         {...jsonLdScriptProps<WebSite>({
           '@context': 'https://schema.org',
           '@type': 'WebSite',
-          name: domainName,
-          alternateName: domainName,
-          url: EnvVars.URL,
+          'name': domainName,
+          'alternateName': domainName,
+          'url': EnvVars.URL,
         })}
       />
     </Head>

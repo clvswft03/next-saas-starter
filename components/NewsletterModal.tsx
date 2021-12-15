@@ -20,7 +20,10 @@ export default function NewsletterModal({ onClose }: NewsletterModalProps) {
 
   useEscClose({ onClose });
 
-  function onSubmit(event: React.FormEvent<HTMLFormElement>, enrollNewsletter: (props: DefaultFormFields) => void) {
+  function onSubmit(
+    event: React.FormEvent<HTMLFormElement>,
+    enrollNewsletter: (props: DefaultFormFields) => void,
+  ) {
     event.preventDefault();
     console.log({ email });
     if (email) {
@@ -36,7 +39,11 @@ export default function NewsletterModal({ onClose }: NewsletterModalProps) {
         return (
           <Overlay>
             <Container>
-              <Card onSubmit={(event: React.FormEvent<HTMLFormElement>) => onSubmit(event, subscribe)}>
+              <Card
+                onSubmit={(event: React.FormEvent<HTMLFormElement>) =>
+                  onSubmit(event, subscribe)
+                }
+              >
                 <CloseIconContainer>
                   <CloseIcon onClick={onClose} />
                 </CloseIconContainer>
@@ -47,7 +54,9 @@ export default function NewsletterModal({ onClose }: NewsletterModalProps) {
                     <Row>
                       <CustomInput
                         value={email}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                          setEmail(e.target.value)
+                        }
                         placeholder="Enter your email..."
                         required
                       />
@@ -55,7 +64,11 @@ export default function NewsletterModal({ onClose }: NewsletterModalProps) {
                         Submit
                       </CustomButton>
                     </Row>
-                    {message && <ErrorMessage dangerouslySetInnerHTML={{ __html: message as string }} />}
+                    {message && (
+                      <ErrorMessage
+                        dangerouslySetInnerHTML={{ __html: message as string }}
+                      />
+                    )}
                   </>
                 )}
               </Card>

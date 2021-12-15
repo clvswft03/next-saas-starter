@@ -44,7 +44,13 @@ export default function FeaturesGallery() {
 
     return (
       <ImageContainer key={singleTab.title} isActive={isActive}>
-        <NextImage src={singleTab.imageUrl} alt={singleTab.title} layout="fill" objectFit="contain" priority={isFirst} />
+        <NextImage
+          src={singleTab.imageUrl}
+          alt={singleTab.title}
+          layout="fill"
+          objectFit="contain"
+          priority={isFirst}
+        />
       </ImageContainer>
     );
   });
@@ -56,7 +62,10 @@ export default function FeaturesGallery() {
       <Tab isActive={isActive} key={idx} onClick={() => handleTabClick(idx)}>
         <TabTitleContainer>
           <CircleContainer>
-            <ThreeLayersCircle baseColor={isActive ? 'transparent' : singleTab.baseColor} secondColor={singleTab.secondColor} />
+            <ThreeLayersCircle
+              baseColor={isActive ? 'transparent' : singleTab.baseColor}
+              secondColor={singleTab.secondColor}
+            />
           </CircleContainer>
           <h4>{singleTab.title}</h4>
         </TabTitleContainer>

@@ -49,7 +49,8 @@ export default function Code({
                   const lineNumber = i + 1;
                   const isSelected = selectedLines.includes(lineNumber);
                   const lineProps = getLineProps({ line, key: i });
-                  const className = lineProps.className + (isSelected ? ' selected-line' : '');
+                  const className =
+                    lineProps.className + (isSelected ? ' selected-line' : '');
 
                   return (
                     <Line key={i} {...{ ...lineProps, className }}>

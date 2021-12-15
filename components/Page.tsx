@@ -11,7 +11,11 @@ export interface PageProps {
   description?: string;
 }
 
-export default function Page({ title, description, children }: PropsWithChildren<PageProps>) {
+export default function Page({
+  title,
+  description,
+  children,
+}: PropsWithChildren<PageProps>) {
   return (
     <>
       <Head>

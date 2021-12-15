@@ -11,7 +11,13 @@ interface PricingCardProps {
   isOutlined?: boolean;
 }
 
-export default function PricingCard({ title, description, benefits, isOutlined, children }: PropsWithChildren<PricingCardProps>) {
+export default function PricingCard({
+  title,
+  description,
+  benefits,
+  isOutlined,
+  children,
+}: PropsWithChildren<PricingCardProps>) {
   const isAnyBenefitPresent = benefits?.length;
 
   return (

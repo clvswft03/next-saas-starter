@@ -6,7 +6,13 @@ export default function ColorSwitcher() {
 
   const sunIcon = (
     <svg viewBox="0 0 24 24" focusable="false">
-      <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2" fill="none" stroke="currentColor">
+      <g
+        strokeLinejoin="round"
+        strokeLinecap="round"
+        strokeWidth="2"
+        fill="none"
+        stroke="currentColor"
+      >
         <circle cx="12" cy="12" r="5"></circle>
         <path d="M12 1v2"></path>
         <path d="M12 21v2"></path>
@@ -29,7 +35,11 @@ export default function ColorSwitcher() {
     </svg>
   );
 
-  return <CustomButton onClick={toggleTheme}>{colorMode === 'light' ? moonIcon : sunIcon}</CustomButton>;
+  return (
+    <CustomButton onClick={toggleTheme}>
+      {colorMode === 'light' ? moonIcon : sunIcon}
+    </CustomButton>
+  );
 }
 
 const CustomButton = styled.button`

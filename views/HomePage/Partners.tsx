@@ -25,7 +25,13 @@ export default function Partners() {
         slidesPerView={6}
         spaceBetween={30}
         loop={true}
-        autoplay={{ delay: 0, disableOnInteraction: false, pauseOnMouseEnter: false, waitForTransition: false, stopOnLastSlide: false }}
+        autoplay={{
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: false,
+          waitForTransition: false,
+          stopOnLastSlide: false,
+        }}
         speed={3000}
         breakpoints={{
           320: { slidesPerView: 2 },
@@ -36,7 +42,12 @@ export default function Partners() {
       >
         {PARTNER_LOGOS.map((logo) => (
           <SwiperSlide key={logo}>
-            <NextImage src={'/partners/' + logo} alt={normalizePartnerLogoName(logo)} width={128} height={128} />
+            <NextImage
+              src={'/partners/' + logo}
+              alt={normalizePartnerLogoName(logo)}
+              width={128}
+              height={128}
+            />
           </SwiperSlide>
         ))}
       </Swiper>

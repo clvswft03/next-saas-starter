@@ -13,5 +13,12 @@ export function useScrollPosition(
   wait?: number | undefined,
   boundingElement?: ElementRef | undefined,
 ) {
-  return originalUseScrollPosition(effect, deps, element, useWindow, wait, boundingElement);
+  return originalUseScrollPosition(
+    effect,
+    deps,
+    element,
+    useWindow,
+    wait,
+    boundingElement,
+  );
 }

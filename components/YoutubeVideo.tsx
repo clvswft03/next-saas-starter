@@ -46,7 +46,9 @@ export default function YoutubeVideo(props: YoutubeVideoProps) {
   }
   </style>
   <a style="color: rgb(var(--primary))" href=https://www.youtube.com/embed/${videoHash}?autoplay=1>
-    <img class="thumbnail" src="https://img.youtube.com/vi/${videoHash}/hqdefault.jpg" alt='${title || ''}'>
+    <img class="thumbnail" src="https://img.youtube.com/vi/${videoHash}/hqdefault.jpg" alt='${
+    title || ''
+  }'>
     <img class="play" src="${playIcon}" alt="Play the video">
   </a>`;
   return (

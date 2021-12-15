@@ -9,7 +9,11 @@ interface AccordionProps {
   isOpen?: boolean;
 }
 
-export default function Accordion({ title, isOpen, children }: PropsWithChildren<AccordionProps>) {
+export default function Accordion({
+  title,
+  isOpen,
+  children,
+}: PropsWithChildren<AccordionProps>) {
   const [hasCollapsed, setHasCollapsed] = useState(!isOpen);
   const isActive = !hasCollapsed;
   return (
@@ -24,7 +28,10 @@ export default function Accordion({ title, isOpen, children }: PropsWithChildren
             aria-hidden="true"
             preserveAspectRatio="none"
           >
-            <path fill="currentColor" d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path>
+            <path
+              fill="currentColor"
+              d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            ></path>
           </svg>
         </Icon>
       </TitleWrapper>

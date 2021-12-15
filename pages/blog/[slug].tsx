@@ -14,7 +14,9 @@ import OpenGraphHead from 'views/SingleArticlePage/OpenGraphHead';
 import ShareWidget from 'views/SingleArticlePage/ShareWidget';
 import StructuredDataHead from 'views/SingleArticlePage/StructuredDataHead';
 
-export default function SingleArticlePage(props: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function SingleArticlePage(
+  props: InferGetStaticPropsType<typeof getStaticProps>,
+) {
   const { slug, content, meta, readTime } = props;
   const { title, date, imageUrl } = meta;
 
@@ -53,7 +55,12 @@ export default function SingleArticlePage(props: InferGetStaticPropsType<typeof 
       <MetadataHead {...meta} />
       <CustomContainer id="content">
         <ShareWidget title={title} slug={slug} />
-        <Header title={title} formattedDate={formattedDate} imageUrl={imageUrl} readTime={readTime} />
+        <Header
+          title={title}
+          formattedDate={formattedDate}
+          imageUrl={imageUrl}
+          readTime={readTime}
+        />
         <MDXRichText {...content} />
       </CustomContainer>
     </>
@@ -68,11 +75,15 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }: GetStaticPropsContext<{ slug: string }>) {
+export async function getStaticProps({
+  params,
+}: GetStaticPropsContext<{ slug: string }>) {
   if (params) {
     const { slug, content, meta } = await getSinglePost(params.slug);
     const serializedContent = await serializeContent(content, meta);
-    return { props: { slug, content: serializedContent, meta, readTime: getReadTime(content) } };
+    return {
+      props: { slug, content: serializedContent, meta, readTime: getReadTime(content) },
+    };
   }
 
   async function serializeContent(content: string, meta: Record<string, unknown>) {

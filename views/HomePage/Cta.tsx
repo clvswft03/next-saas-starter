@@ -14,10 +14,12 @@ export default function Cta() {
       <Container>
         <Stack>
           <OverTitle>Lorem ipsum dolor sit amet</OverTitle>
-          <SectionTitle>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus delectus?</SectionTitle>
+          <SectionTitle>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus delectus?
+          </SectionTitle>
           <Description>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda beatae accusamus deleniti nihil quas tempora numquam, vitae
-            culpa.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda beatae
+            accusamus deleniti nihil quas tempora numquam, vitae culpa.
           </Description>
           <ButtonGroup>
             <NextLink href="#early-access" passHref>

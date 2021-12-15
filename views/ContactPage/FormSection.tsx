@@ -50,15 +50,27 @@ export default function FormSection() {
   return (
     <Wrapper>
       <Form onSubmit={handleSubmit(onSubmit)}>
-        {hasErrored && <ErrorMessage>Couldn&apos;t send email. Please try again.</ErrorMessage>}
+        {hasErrored && (
+          <ErrorMessage>Couldn&apos;t send email. Please try again.</ErrorMessage>
+        )}
         <InputGroup>
           <InputStack>
             {errors.name && <ErrorMessage>Name is required</ErrorMessage>}
-            <Input placeholder="Your Name" id="name" disabled={isDisabled} {...register('name', { required: true })} />
+            <Input
+              placeholder="Your Name"
+              id="name"
+              disabled={isDisabled}
+              {...register('name', { required: true })}
+            />
           </InputStack>
           <InputStack>
             {errors.email && <ErrorMessage>Email is required</ErrorMessage>}
-            <Input placeholder="Your Email" id="email" disabled={isDisabled} {...register('email', { required: true })} />
+            <Input
+              placeholder="Your Email"
+              id="email"
+              disabled={isDisabled}
+              {...register('email', { required: true })}
+            />
           </InputStack>
         </InputGroup>
         <InputStack>

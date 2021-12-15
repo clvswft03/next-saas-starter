@@ -10,7 +10,12 @@ interface HeaderProps {
   readTime: string;
 }
 
-export default function Header({ title, formattedDate, imageUrl, readTime }: HeaderProps) {
+export default function Header({
+  title,
+  formattedDate,
+  imageUrl,
+  readTime,
+}: HeaderProps) {
   return (
     <HeaderContainer>
       <ArticleImage src={imageUrl} />
