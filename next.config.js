@@ -1,6 +1,7 @@
+const bundleAnalyzer = require('@next/bundle-analyzer');
 const CopyPlugin = require('copy-webpack-plugin');
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
+const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
