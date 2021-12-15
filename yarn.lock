@@ -473,11 +473,11 @@ __metadata:
   linkType: hard
 
 "@babel/parser@npm:^7.12.7, @babel/parser@npm:^7.16.0, @babel/parser@npm:^7.16.5, @babel/parser@npm:^7.7.0":
-  version: 7.16.5
-  resolution: "@babel/parser@npm:7.16.5"
+  version: 7.16.6
+  resolution: "@babel/parser@npm:7.16.6"
   bin:
     parser: ./bin/babel-parser.js
-  checksum: 107230485fafbf215cec86ea8ae6a7e5f7f9d6ac0e63019008560f536511e7830fb2fece3052bd99a6d9e19f78fca332522beba2fde9453fffdafa37fa59baef
+  checksum: 5cbb01a7b2ba5d609945099bfadb01f54e11ef85201e1e0bf47010ee1b35c257eca6ff91606c6ce8adba82a95e180b583183e4dc076f4a70e706152075dd98ca
   languageName: node
   linkType: hard
 
@@ -8001,11 +8001,11 @@ __metadata:
   linkType: hard
 
 "react-hook-form@npm:^7.17.4":
-  version: 7.22.0
-  resolution: "react-hook-form@npm:7.22.0"
+  version: 7.22.1
+  resolution: "react-hook-form@npm:7.22.1"
   peerDependencies:
     react: ^16.8.0 || ^17
-  checksum: 15d3b821a9f8a85ce785717d86f75da8733c576309714d13c6d10b007c0b8cd891c434de2ba099e827e4869c1a5499a99e760defeb989263a0c687f68fda3d10
+  checksum: 52e01875038bbc74b4cc07daa90829f2f68dcc86443ad5a2361218272de9724c18768b292f7cc136241d9e929db6dc37ba2e732e00486ad1e65a705e582b988b
   languageName: node
   linkType: hard
 
