@@ -1,7 +1,6 @@
 {
-  "bracketSpacing": false,
   "endOfLine": "lf",
-  "printWidth": 88,
+  "printWidth": 90,
   "quoteProps": "consistent",
   "semi": true,
   "singleQuote": true,
