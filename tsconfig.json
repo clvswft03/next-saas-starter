@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -11,11 +10,24 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "jsx": "preserve",
+    "incremental": true,
+    "allowJs": false,
     "baseUrl": ".",
-    "incremental": true
+    "experimentalDecorators": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "removeComments": true,
+    "sourceMap": true,
+    // With Babel
+    // REF: https://www.typescriptlang.org/docs/handbook/babel-with-typescript.html
+    // Ensure that .d.ts files are created by tsc, but not .js files
+    "declaration": true,
+    // "emitDeclarationOnly": true,
+    // Ensure that Babel can safely transpile files in the TypeScript project
+    "isolatedModules": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": ["next-env.d.ts", "**/*.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": [".github", ".husky", ".next", ".yarn", ".vscode", "build", "node_modules"]
 }

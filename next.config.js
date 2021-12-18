@@ -15,7 +15,9 @@ module.exports = withBundleAnalyzer({
   },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     if (!dev) {
-      config.plugins.push(new CopyPlugin({ patterns: [{ from: 'posts', to: 'posts' }] }));
+      config.plugins.push(
+        new CopyPlugin({ patterns: [{ from: 'src/posts', to: 'src/posts' }] }),
+      );
     }
     config.module.rules.push({
       test: /\.svg$/,
