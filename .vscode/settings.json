@@ -1,43 +1,84 @@
 {
+  // Format on save (prettier)
+  "[css][html][json][jsonc][scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  // Disable Auto-formatting (some of these are handled by eslint)
+  "[javascript][javascriptreact][plaintext][typescript][typescriptreact]": {
+    "editor.formatOnSave": false
+  },
+  // Allow Unicode characters
+  "[markdown][plaintext]": {
+    "editor.quickSuggestions": false,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 90
+  },
+
+  "[markdown]": {
+    "editor.quickSuggestions": false,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 90
+  },
+  "cSpell.ignorePaths": [
+    ".git/objects/",
+    ".vscode-insiders/",
+    ".vscode/",
+    "node_modules/",
+    "src/posts/*.mdx",
+
+    "package-lock.json",
+    "vscode-extension"
+  ],
   "cSpell.words": [
-    "adipisicing",
-    "amet",
-    "armhf",
-    "Assumenda",
-    "backuped",
-    "beatae",
     "Blazity",
-    "bmstefanski",
     "ccompli",
     "ccustom",
-    "cillum",
-    "consectetur",
-    "consequat",
     "corejs",
-    "dearmor",
-    "delectus",
-    "deleniti",
-    "duis",
-    "eiusmod",
-    "elit",
-    "enim",
-    "fugiat",
-    "ilasota",
-    "laboris",
-    "logoipsum",
+    "fullpagejs",
     "nextjs",
-    "nulla",
-    "numquam",
-    "onkibi",
-    "quas",
-    "quis",
-    "reprehenderit",
-    "Sunt",
+    "reactjs",
     "svgr",
     "swiper",
-    "tempor",
-    "voluptate"
+    "Vercel"
   ],
+  "editor.codeActionsOnSave": {
+    // VALUE: false
+    "source.fixAll": false,
+
+    // VALUE: true
+    "source.fixAll.eslint": true,
+    "source.fixAll.markdownlint": true
+  },
+  "editor.comments.insertSpace": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "eslint.packageManager": "yarn",
+  "eslint.probe": [
+    "css",
+    "html",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "markdown",
+    "typescript",
+    "typescriptreact"
+  ],
+  "licenser.author": "Blazity",
+  "licenser.disableAutoHeaderInsertion": true,
+  "licenser.license": "MIT",
+  "licenser.projectName": "next-saas-starter",
+  "markdown.extension.toc.levels": "2..6",
+  "markdown.extension.toc.omittedFromToc": {
+    "README.md": ["## Table Of Contents"]
+  },
+  "markdownlint.run": "onSave",
   "search.exclude": {
     "**/.pnp.*": true,
     "**/.yarn": true
