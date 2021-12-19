@@ -30,5 +30,14 @@
     "isolatedModules": true
   },
   "include": ["next-env.d.ts", "**/*.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": [".github", ".husky", ".next", ".yarn", ".vscode", "build", "node_modules"]
+  "exclude": [
+    ".github",
+    ".husky",
+    ".next",
+    ".yarn",
+    ".vscode",
+    "build",
+    "out",
+    "node_modules"
+  ]
 }

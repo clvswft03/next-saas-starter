@@ -368,4 +368,21 @@ $RECYCLE.BIN/
 
 ### Custom ###
 
+**/*_bak
+**/*.bak
+**/*.bak.*
+**/*.local
+**/*.local.*
+**/*.swo
+**/*.swp
+
+/.backup/
+/.config/
+/.local/
 /build/
+/instrumented/
+/out/
+/target/
+/target/
+
+/.env-cmdrc
