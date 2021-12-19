@@ -16,8 +16,8 @@
     "lint": "yarn type:check && yarn eslint:check",
     "lint:fix": "yarn type:check && yarn eslint:fix",
     "prepare": "husky install",
-    "prettier:check": "prettier --ignore-path .eslintignore --check \"./**/*.{css,html,js,json,jsx,md,scss,ts,tsx,yaml,yml}\"",
-    "prettier:fix": "prettier --ignore-path .eslintignore --write \"./**/*.{css,html,js,json,jsx,md,scss,ts,tsx,yaml,yml}\"",
+    "prettier:check": "prettier --check \"./**/*.{css,html,js,json,jsx,md,scss,ts,tsx,yaml,yml}\"",
+    "prettier:fix": "prettier --write \"./**/*.{css,html,js,json,jsx,md,scss,ts,tsx,yaml,yml}\"",
     "start": "next start",
     "type:check": "tsc --noemit"
   },

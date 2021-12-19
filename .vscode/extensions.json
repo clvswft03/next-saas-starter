@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+    "streetsidesoftware.code-spell-checker",
+    "mrmlnc.vscode-scss",
+    "sonarsource.sonarlint-vscode",
+    "jock.svg",
+    "styled-components.vscode-styled-components"
+  ]
+}
