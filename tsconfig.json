@@ -37,6 +37,7 @@
     ".yarn",
     ".vscode",
     "build",
+    "cypress",
     "out",
     "node_modules"
   ]

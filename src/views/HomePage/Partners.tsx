@@ -20,7 +20,7 @@ const PARTNER_LOGOS = [
 export default function Partners() {
   return (
     <PartnersWrapper>
-      <Title>official partners with</Title>
+      <Title data-cy="partnersTitle">official partners with</Title>
       <Swiper
         modules={[Autoplay]}
         slidesPerView={6}

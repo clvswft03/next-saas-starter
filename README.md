@@ -79,6 +79,43 @@ yarn start
 yarn build
 ```
 
+- [env-cmd](https://www.npmjs.com/package/env-cmd) provides environment variables of multiple environments to the scripts of [package.json](./package.json).
+- It can be used in combination with [cross-env](https://www.npmjs.com/package/cross-env).
+- Below is an example of [.env-cmdrc](.env-cmdrc) (property names are shortened to simplify it on the script)
+
+```json
+{
+  "c": {
+    "APP_NAME": "next-saas-starter",
+    "ENV": "common"
+  },
+  "a": {
+    "ANALYZE": true,
+    "ENV": "analyze"
+  },
+  "d": {
+    "BACKEND_PORT": "4000",
+    "ENV": "development",
+    "PORT": "3000"
+  },
+  "t": {
+    "BACKEND_PORT": "4100",
+    "ENV": "test",
+    "PORT": "3100"
+  },
+  "ci": {
+    "BACKEND_PORT": "4200",
+    "CI": true,
+    "PORT": "3200"
+  },
+  "p": {
+    "BACKEND_PORT": "4300",
+    "ENV": "production",
+    "PORT": "3300"
+  }
+}
+```
+
 ## One click deploy
 
 Clone the repository and one-click deploy to Vercel for free!

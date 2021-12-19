@@ -31,7 +31,9 @@ export default function ScrollableBlogPosts({ posts }: ScrollableBlogPostsProps)
       <Container>
         <Content>
           <OverTitle>features</OverTitle>
-          <SectionTitle>What are you signing in for?</SectionTitle>
+          <SectionTitle data-cy="postsSectionTitle">
+            What are you signing in for?
+          </SectionTitle>
         </Content>
       </Container>
 
