@@ -10,7 +10,7 @@ module.exports = {
           '@babel/plugin-transform-regenerator',
         ],
         useBuiltIns: 'entry',
-        corejs: '3.19',
+        corejs: '3.20',
       },
     ],
     '@babel/preset-typescript',
