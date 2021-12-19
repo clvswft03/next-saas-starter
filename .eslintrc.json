@@ -28,7 +28,8 @@
   },
   "globals": {
     "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
+    "SharedArrayBuffer": "readonly",
+    "fullpage_api": "readonly"
   },
   "rules": {
     "import/extensions": [

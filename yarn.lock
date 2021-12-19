@@ -1380,6 +1380,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/polyfill@npm:^7.2.5":
+  version: 7.12.1
+  resolution: "@babel/polyfill@npm:7.12.1"
+  dependencies:
+    core-js: ^2.6.5
+    regenerator-runtime: ^0.13.4
+  checksum: 3f59a9d85a41b390b044a1be13e11ae6d8efbfcf4e07217964585c7cef337b828eecfc5e164083227189146d2b6efc1affae8f59c831438eb40b848ab6fe5f39
+  languageName: node
+  linkType: hard
+
 "@babel/preset-env@npm:7.16.5, @babel/preset-env@npm:^7.15.6":
   version: 7.16.5
   resolution: "@babel/preset-env@npm:7.16.5"
@@ -1641,6 +1651,16 @@ __metadata:
     mdast-util-find-and-replace: ^1.0.0
     unist-util-visit: ^2.0.3
   checksum: 8dc370c984ae2728c2339ebe8778236fedaae63f39e1348fcded07c8de6057c480564282ad56462a4d942b5de1f58abd0851c42549a3341cea510d1238a9b489
+  languageName: node
+  linkType: hard
+
+"@fullpage/react-fullpage@npm:0.1.19":
+  version: 0.1.19
+  resolution: "@fullpage/react-fullpage@npm:0.1.19"
+  dependencies:
+    "@babel/polyfill": ^7.2.5
+    fullpage.js: ^3.1.0
+  checksum: 43320e9264a09ce52019865b00c6c0eb98ffbe13bf795a7d88732d7705fb9d6495b5b52f42dae70e0742a935be5e9c4c4a268cf186d49e2fe80caa52883b623c
   languageName: node
   linkType: hard
 
@@ -2327,6 +2347,15 @@ __metadata:
   version: 15.7.4
   resolution: "@types/prop-types@npm:15.7.4"
   checksum: ef6e1899e59b876c273811b1bd845022fc66d5a3d11cb38a25b6c566b30514ae38fe20a40f67622f362a4f4f7f9224e22d8da101cff3d6e97e11d7b4c307cfc1
+  languageName: node
+  linkType: hard
+
+"@types/react-dom@npm:17.0.11":
+  version: 17.0.11
+  resolution: "@types/react-dom@npm:17.0.11"
+  dependencies:
+    "@types/react": "*"
+  checksum: 4d5730dffbef86c887cecad7e3cecda424ce6a64d0b5441c63b5b015d48219868660a2bb1aa15e897e565ad8867fa6b885d4358b04e1c4e589ba4c07c3fda55c
   languageName: node
   linkType: hard
 
@@ -3752,6 +3781,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"core-js@npm:^2.6.5":
+  version: 2.6.12
+  resolution: "core-js@npm:2.6.12"
+  checksum: 44fa9934a85f8c78d61e0c8b7b22436330471ffe59ec5076fe7f324d6e8cf7f824b14b1c81ca73608b13bdb0fef035bd820989bf059767ad6fa13123bb8bd016
+  languageName: node
+  linkType: hard
+
 "cosmiconfig@npm:^7.0.1":
   version: 7.0.1
   resolution: "cosmiconfig@npm:7.0.1"
@@ -4979,6 +5015,13 @@ __metadata:
   dependencies:
     node-gyp: latest
   conditions: os=darwin
+  languageName: node
+  linkType: hard
+
+"fullpage.js@npm:^3.1.0":
+  version: 3.1.2
+  resolution: "fullpage.js@npm:3.1.2"
+  checksum: 73cfa26ac2a636ad98baf03e8afa7bcf0358659c6c71aaa4871a8ce2a9f04baf2f502a59b585122bb11ea2fba4ac94cc082e528cce939804d9414066eba25e66
   languageName: node
   linkType: hard
 
@@ -7047,12 +7090,14 @@ __metadata:
     "@babel/preset-typescript": 7.16.5
     "@babel/runtime": 7.16.5
     "@fec/remark-a11y-emoji": 3.1.0
+    "@fullpage/react-fullpage": 0.1.19
     "@n8tb1t/use-scroll-position": 2.0.3
     "@next/bundle-analyzer": 12.0.7
     "@next/eslint-plugin-next": 12.0.7
     "@sendgrid/mail": 7.6.0
     "@svgr/webpack": 6.1.2
     "@types/react": 17.0.37
+    "@types/react-dom": 17.0.11
     "@types/react-mailchimp-subscribe": 2.1.1
     "@types/styled-components": 5.1.18
     "@types/swiper": 5.4.3
