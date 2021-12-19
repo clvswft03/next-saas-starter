@@ -35,6 +35,10 @@
       "error",
       "never",
       {
+        // VALUE: "always"
+        "svg": "always",
+
+        // VALUE: "never"
         "ts": "never",
         "tsx": "never",
         "js": "never",

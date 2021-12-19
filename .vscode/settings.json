@@ -38,5 +38,9 @@
     "tempor",
     "voluptate"
   ],
+  "search.exclude": {
+    "**/.pnp.*": true,
+    "**/.yarn": true
+  },
   "typescript.tsdk": "node_modules/typescript/lib"
 }
