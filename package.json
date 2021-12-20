@@ -87,6 +87,9 @@
     "test:unit": "echo 'test:unit is not implemented yet'",
     "test:unit:watch": "echo 'test:unit:watch is not implemented yet'",
     "test:watch": "yarn test:e2e:watch && yarn test:unit:watch",
+    "tina-build": "yarn tinacms server:start -c \"next build\"",
+    "tina-dev": "yarn tinacms server:start -c \"next dev\"",
+    "tina-start": "yarn tinacms server:start -c \"next start\"",
     "watch": "yarn watch:dev",
     "watch:ci": "env-cmd -e c,ci -x cross-env PORT=\\$PORT next dev",
     "watch:debug": "env-cmd -e c,d -x cross-env PORT=\\$PORT NODE_OPTIONS='--inspect' next dev",
@@ -100,6 +103,8 @@
     "@fullpage/react-fullpage": "0.1.19",
     "@n8tb1t/use-scroll-position": "2.0.3",
     "@sendgrid/mail": "7.6.0",
+    "@svgr/webpack": "6.1.2",
+    "@tinacms/cli": "0.58.5",
     "@types/react": "17.0.37",
     "@types/react-dom": "17.0.11",
     "@types/react-mailchimp-subscribe": "2.1.1",
@@ -127,7 +132,9 @@
     "sharp": "0.29.3",
     "styled-components": "5.3.3",
     "swiper": "7.3.3",
+    "tinacms": "0.61.1",
     "typescript": "4.5.4",
+    "url-loader": "4.1.1",
     "use-clipboard-copy": "0.2.0",
     "use-resize-observer": "8.0.0"
   },
@@ -144,7 +151,6 @@
     "@fec/remark-a11y-emoji": "3.1.0",
     "@next/bundle-analyzer": "12.0.7",
     "@next/eslint-plugin-next": "12.0.7",
-    "@svgr/webpack": "6.1.2",
     "@types/cypress": "1.1.3",
     "all-contributors-cli": "6.20.0",
     "babel-plugin-module-resolver": "4.1.0",
@@ -177,7 +183,6 @@
     "remark-sectionize": "1.1.1",
     "remark-slug": "7.0.1",
     "rimraf": "3.0.2",
-    "url-loader": "4.1.1",
     "webpack": "5.65.0"
   }
 }
