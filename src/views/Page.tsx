@@ -2,12 +2,9 @@ import Head from 'next/head';
 import { PropsWithChildren } from 'react';
 import styled from 'styled-components';
 
+import { Container, SectionTitle } from '@/layout';
 import { EnvVars } from '@/env';
-
 import { media } from '@/utils/media';
-
-import Container from './Container';
-import SectionTitle from './SectionTitle';
 
 export interface PageProps {
   title: string;

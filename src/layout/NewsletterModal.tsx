@@ -2,15 +2,12 @@ import MailchimpSubscribe, { DefaultFormFields } from 'react-mailchimp-subscribe
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+import { Button, CloseIcon, Input, MailSentState } from '@/components';
 import { EnvVars } from '@/env';
 import { media } from '@/utils/media';
-import useEscClose from '@/hooks/useEscKey';
+import { useEscClose } from '@/hooks';
 
-import Button from './Button';
-import CloseIcon from './CloseIcon';
 import Container from './Container';
-import Input from './Input';
-import MailSentState from './MailSentState';
 import Overlay from './Overlay';
 
 export interface NewsletterModalProps {

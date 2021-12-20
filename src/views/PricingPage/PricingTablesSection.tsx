@@ -1,9 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import AutofitGrid from '@/components/AutofitGrid';
-import PricingCard from '@/components/PricingCard';
-import SectionTitle from '@/components/SectionTitle';
+import { AutofitGrid, SectionTitle } from '@/layout';
+import { PricingCard } from '@/components';
 
 export default function PricingTablesSection() {
   return (

@@ -4,18 +4,16 @@ import dynamic from 'next/dynamic';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 
+import { Button, HamburgerIcon, Logo } from '@/components';
 import { NavItems, SingleNavItem } from '@/types';
-import { ScrollPositionEffectProps, useScrollPosition } from '@/hooks/useScrollPosition';
+import { ScrollPositionEffectProps, useScrollPosition } from '@/hooks';
 import { media } from '@/utils/media';
-import { useNewsletterModalContext } from '@/contexts/newsletter-modal.context';
+import { useNewsletterModalContext } from '@/contexts';
 
-import Button from './Button';
 import Container from './Container';
 import Drawer from './Drawer';
-import { HamburgerIcon } from './HamburgerIcon';
-import Logo from './Logo';
 
-const ColorSwitcher = dynamic(() => import('../components/ColorSwitcher'), {
+const ColorSwitcher = dynamic(() => import('@/components/ColorSwitcher'), {
   ssr: false,
 });
 

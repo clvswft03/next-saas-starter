@@ -4,7 +4,7 @@ import NextImage from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 
-import Container from '@/components/Container';
+import { Container } from '@/layout';
 import { media } from '@/utils/media';
 
 const PARTNER_LOGOS = [

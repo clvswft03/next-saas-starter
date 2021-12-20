@@ -2,14 +2,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { useEffect, useState } from 'react';
 import { A11y } from 'swiper';
 import styled from 'styled-components';
+import useResizeObserver from 'use-resize-observer';
 
-import ArticleCard from '@/components/ArticleCard';
-import Container from '@/components/Container';
-import OverTitle from '@/components/OverTitle';
-import SectionTitle from '@/components/SectionTitle';
+import { Container, OverTitle, SectionTitle } from '@/layout';
+import { ArticleCard } from '@/components';
 import { SingleArticle } from '@/types';
 import { media } from '@/utils/media';
-import { useResizeObserver } from '@/hooks/useResizeObserver';
 
 interface ScrollableBlogPostsProps {
   posts: SingleArticle[];

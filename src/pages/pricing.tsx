@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
-import FaqSection from '@/views/PricingPage/FaqSection';
-import Page from '@/components/Page';
-import PricingTablesSection from '@/views/PricingPage/PricingTablesSection';
+import { FaqSection, PricingTablesSection } from '@/views/PricingPage';
+import { Page } from '@/views';
 
 export default function PricingPage() {
   return (

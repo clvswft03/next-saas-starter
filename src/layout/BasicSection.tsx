@@ -2,11 +2,11 @@ import React, { PropsWithChildren } from 'react';
 import NextImage from 'next/image';
 import styled from 'styled-components';
 
+import { RichText } from '@/components';
 import { media } from '@/utils/media';
 
 import Container from './Container';
 import OverTitle from './OverTitle';
-import RichText from './RichText';
 
 export interface BasicSectionProps {
   imageUrl: string;

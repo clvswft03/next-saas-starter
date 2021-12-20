@@ -13,10 +13,6 @@ export function getAllPostsSlugs() {
   return fs.readdirSync(getPostsDirectory()).map(normalizePostName);
 }
 
-function normalizePostName(postName: string) {
-  return postName.replace('.mdx', '');
-}
-
 export async function getSinglePost(slug: string): Promise<SingleArticle> {
   const filePath = path.join(getPostsDirectory(), slug + '.mdx');
   const contents = fs.readFileSync(filePath, 'utf8');
@@ -31,4 +27,8 @@ export function getPostsDirectory() {
     basePath = path.join(process.cwd(), '.next/server/chunks');
   }
   return path.join(basePath, '/src/posts');
+}
+
+function normalizePostName(postName: string) {
+  return postName.replace('.mdx', '');
 }

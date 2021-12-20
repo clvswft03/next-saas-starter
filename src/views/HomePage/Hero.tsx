@@ -1,13 +1,11 @@
 import NextLink from 'next/link';
 import styled from 'styled-components';
 
-import Button from '@/components/Button';
-import ButtonGroup from '@/components/ButtonGroup';
-import Container from '@/components/Container';
+import { Button, ButtonGroup } from '@/components';
+import { Container, OverTitle } from '@/layout';
 import HeroIllustration from '@/components/HeroIllustation';
-import OverTitle from '@/components/OverTitle';
 import { media } from '@/utils/media';
-import { useNewsletterModalContext } from '@/contexts/newsletter-modal.context';
+import { useNewsletterModalContext } from '@/contexts';
 
 export default function Hero() {
   const { setIsModalOpened } = useNewsletterModalContext();

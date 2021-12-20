@@ -3,10 +3,10 @@ import NextLink from 'next/link';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 
+import { CloseIcon } from '@/components';
 import { NavItems } from '@/types';
 
 import ClientOnly from './ClientOnly';
-import CloseIcon from './CloseIcon';
 import OriginalDrawer from './Drawer';
 
 type NavigationDrawerProps = PropsWithChildren<{ items: NavItems }>;

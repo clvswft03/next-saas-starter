@@ -1,18 +1,20 @@
 import Head from 'next/head';
 import { InferGetStaticPropsType } from 'next';
+import Link from 'next/link';
 import styled from 'styled-components';
 
-import BasicSection from '@/components/BasicSection';
-import Cta from '@/views/HomePage/Cta';
+import {
+  Cta,
+  Features,
+  FeaturesGallery,
+  Hero,
+  Partners,
+  ScrollableBlogPosts,
+  Testimonials,
+} from '@/views/HomePage';
+import { BasicSection } from '@/layout';
 import { EnvVars } from '@/env';
-import Features from '@/views/HomePage/Features';
-import FeaturesGallery from '@/views/HomePage/FeaturesGallery';
-import Hero from '@/views/HomePage/Hero';
-import Link from '@/components/Link';
-import Partners from '@/views/HomePage/Partners';
-import ScrollableBlogPosts from '@/views/HomePage/ScrollableBlogPosts';
-import Testimonials from '@/views/HomePage/Testimonials';
-import { getAllPosts } from '@/utils/postsFetcher';
+import { getAllPosts } from '@/utils';
 
 export default function Homepage({
   posts,

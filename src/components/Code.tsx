@@ -2,8 +2,8 @@ import Highlight, { Language, defaultProps } from 'prism-react-renderer';
 import React from 'react';
 import styled from 'styled-components';
 
-import ClientOnly from '@/components/ClientOnly';
-import { useClipboard } from '@/hooks/useClipboard';
+import { ClientOnly } from '@/layout';
+import { useClipboard } from '@/hooks';
 
 export interface CodeProps {
   code: string;

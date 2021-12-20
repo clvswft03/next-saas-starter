@@ -2,7 +2,7 @@ import { FacebookIcon, LinkedinIcon, TwitterIcon } from 'react-share';
 import NextLink from 'next/link';
 import styled from 'styled-components';
 
-import Container from '@/components/Container';
+import { Container } from '@/layout';
 import { media } from '@/utils/media';
 
 type SingleFooterListItem = { title: string; href: string };

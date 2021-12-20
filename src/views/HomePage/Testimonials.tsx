@@ -1,12 +1,10 @@
+import { A11y, Autoplay, Navigation } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import NextImage from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 
-import { A11y, Autoplay, Navigation } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-import Container from '@/components/Container';
-import Separator from '@/components/Separator';
+import { Container, Separator } from '@/layout';
 import { media } from '@/utils/media';
 
 const TESTIMONIALS = [

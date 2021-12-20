@@ -8,17 +8,12 @@ import 'swiper/css/autoplay';
 import 'swiper/css/bundle';
 import 'swiper/css/navigation';
 
-import {
-  NewsletterModalContextProvider,
-  useNewsletterModalContext,
-} from '@/contexts/newsletter-modal.context';
-import Footer from '@/components/Footer';
-import { GlobalStyle } from '@/components/GlobalStyles';
+import { Footer, Navbar, NavigationDrawer } from '@/layout';
+import { NewsletterModalContextProvider, useNewsletterModalContext } from '@/contexts';
+import GlobalStyle from '@/GlobalStyles';
 import { NavItems } from '@/types';
-import Navbar from '@/components/Navbar';
-import NavigationDrawer from '@/components/NavigationDrawer';
-import NewsletterModal from '@/components/NewsletterModal';
-import WaveCta from '@/components/WaveCta';
+import NewsletterModal from '@/layout/NewsletterModal';
+import { WaveCta } from '@/components';
 
 const navItems: NavItems = [
   { title: 'Awesome SaaS Features', href: '/features' },

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ArticleImage from '@/components/ArticleImage';
+import { ArticleImage } from '@/components';
 import { media } from '@/utils/media';
 
 interface HeaderProps {

@@ -3,17 +3,16 @@ import React, { useEffect } from 'react';
 import Head from 'next/head';
 import styled from 'styled-components';
 
-import Container from '@/components/Container';
-import MDXRichText from '@/components/MDXRichText';
-
-import { getAllPostsSlugs, getSinglePost } from '@/utils/postsFetcher';
-import Header from '@/views/SingleArticlePage/Header';
-import MetadataHead from '@/views/SingleArticlePage/MetadataHead';
-import OpenGraphHead from '@/views/SingleArticlePage/OpenGraphHead';
-import ShareWidget from '@/views/SingleArticlePage/ShareWidget';
-import StructuredDataHead from '@/views/SingleArticlePage/StructuredDataHead';
-import { formatDate } from '@/utils/formatDate';
-import { getReadTime } from '@/utils/readTime';
+import {
+  Header,
+  MetadataHead,
+  OpenGraphHead,
+  ShareWidget,
+  StructuredDataHead,
+} from '@/views/SingleArticlePage';
+import { formatDate, getAllPostsSlugs, getReadTime, getSinglePost } from '@/utils';
+import { Container } from '@/layout';
+import { MDXRichText } from '@/components';
 import { media } from '@/utils/media';
 
 export default function SingleArticlePage(
@@ -85,7 +84,12 @@ export async function getStaticProps({
     const { slug, content, meta } = await getSinglePost(params.slug);
     const serializedContent = await serializeContent(content, meta);
     return {
-      props: { slug, content: serializedContent, meta, readTime: getReadTime(content) },
+      props: {
+        slug,
+        content: serializedContent,
+        meta,
+        readTime: getReadTime(content),
+      },
     };
   }
 

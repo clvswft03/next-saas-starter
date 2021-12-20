@@ -34,7 +34,7 @@ const originalColors = [
     { text: `Section 3` },
   ];
 
-const Hooks = () => {
+const HooksPage = () => {
   const [sectionsColor, setsectionsColor] = useState([...originalColors]),
     [fullpages, setfullpages] = useState([...originalPages]);
 
@@ -153,4 +153,4 @@ const Hooks = () => {
   );
 };
 
-export default Hooks;
+export default HooksPage;

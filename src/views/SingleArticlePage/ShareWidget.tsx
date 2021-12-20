@@ -9,7 +9,6 @@ import {
 import styled from 'styled-components';
 
 import { EnvVars } from '@/env';
-
 import { media } from '@/utils/media';
 
 interface ShareWidgetProps {

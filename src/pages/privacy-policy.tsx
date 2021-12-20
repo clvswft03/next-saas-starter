@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import Page from '@/components/Page';
-import RichText from '@/components/RichText';
+import { Page } from '@/views';
+import { RichText } from '@/components';
 
 export default function ContactPage() {
   return (

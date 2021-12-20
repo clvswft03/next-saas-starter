@@ -1,1 +1,1 @@
-export { default } from './hooks';
+export { default as HooksPage } from './hooks';

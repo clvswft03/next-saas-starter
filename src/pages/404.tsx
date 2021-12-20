@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import Container from '@/components/Container';
-import NotFoundIllustration from '@/components/NotFoundIllustration';
+import { Container } from '@/layout';
+import { NotFoundIllustration } from '@/components';
 
 export default function NotFoundPage() {
   return (

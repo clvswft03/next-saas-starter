@@ -1,12 +1,10 @@
 import NextLink from 'next/link';
 import styled from 'styled-components';
 
-import Button from '@/components/Button';
-import ButtonGroup from '@/components/ButtonGroup';
-import Container from '@/components/Container';
-import SectionTitle from '@/components/SectionTitle';
+import { Button, ButtonGroup } from '@/components';
+import { Container, SectionTitle } from '@/layout';
 import { media } from '@/utils/media';
-import { useNewsletterModalContext } from '@/contexts/newsletter-modal.context';
+import { useNewsletterModalContext } from '@/contexts';
 
 export default function WaveCta() {
   const { setIsModalOpened } = useNewsletterModalContext();

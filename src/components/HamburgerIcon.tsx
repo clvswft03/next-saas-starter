@@ -1,6 +1,6 @@
 import Icon, { IconProps } from './Icon';
 
-export function HamburgerIcon(props: IconProps) {
+export default function HamburgerIcon(props: IconProps) {
   return (
     <Icon {...props}>
       <svg
