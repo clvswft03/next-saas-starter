@@ -75,6 +75,9 @@
 # run the dev mode
 $ yarn dev
 
+# run with tina
+$ yarn tina-dev
+
 # run the prod mode
 yarn start
 
