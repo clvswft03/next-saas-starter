@@ -15,8 +15,10 @@
     "allowJs": false,
     "baseUrl": ".",
     "experimentalDecorators": true,
+    "types": ["node"],
     "paths": {
-      "/public": ["./public/*"],
+      "/.tina/*": ["./.tina/*"],
+      "/public/*": ["./public/*"],
       "@/*": ["./src/*"]
     },
     "removeComments": true,

@@ -368,6 +368,9 @@ $RECYCLE.BIN/
 
 ### Custom ###
 
+**/temp/
+**/tmp/
+
 **/*_bak
 **/*.bak
 **/*.bak.*

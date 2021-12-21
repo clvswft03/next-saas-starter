@@ -22,7 +22,10 @@ module.exports = {
     ['@babel/plugin-proposal-class-properties', { loose: false }],
     ['@babel/plugin-proposal-decorators', { legacy: true }],
     ['@babel/plugin-transform-runtime', { helpers: true }],
-    ['module-resolver', { alias: { '@': './src' } }],
+    [
+      'module-resolver',
+      { alias: { '/.tina': './.tina', '/public': './public', '@': './src' } },
+    ],
     ['styled-components', { ssr: true, displayName: true, preprocess: false }],
   ],
 };

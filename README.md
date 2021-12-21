@@ -51,6 +51,7 @@
 
 - ⚡ **Next.js** - React framework for static rendering
 - 🤩 **Best SEO setup** - Meta Tags, JSON-LD and Open Graph Tags
+- 🦒 **Tina CMS integration** - local & (optional) production CMS
 - ✅ **Optimized for Web Vitals**
 - 📜 **Blog with MDX**
 - 📫 **Mailchimp Integration** - for newsletters
@@ -67,6 +68,8 @@
 - Setup your [sendgrid](https://sendgrid.com/) API key and add it to environment variables (`SENDGRID_API_KEY` - `.env.local`)
 - Adjust the template to your needs (and checkout `env.ts` file)
 - Deploy the project on [Vercel](https://vercel.com/) **don't forget to add env variables**
+- _(optional)_ Create [Tina Cloud account](https://app.tina.io/signin/), [a project](https://tina.io/docs/tina-cloud/) and fill these `NEXT_PUBLIC_ORGANIZATION_NAME`, `NEXT_PUBLIC_TINA_CLIENT_ID` env vars with proper values
+  > Tina's Content API authenticates directly with GitHub removing the need for users to create GitHub accounts. Access is granted through the dashboard, allowing users to login directly through your site and begin editing! Any changes that are saved by your editors will be commited to the configured branch in your GitHub repository.
 
 ```sh
 # run the dev mode
@@ -87,11 +90,13 @@ yarn build
 {
   "c": {
     "APP_NAME": "next-saas-starter",
-    "ENV": "common"
+    "CY_BROWSER": "chrome",
+    "ENV": "common",
+    "HOST": "http://localhost",
+    "NODE_ENV": "development"
   },
-  "a": {
-    "ANALYZE": true,
-    "ENV": "analyze"
+  "b": {
+    "NODE_OPTIONS": "'--inspect'"
   },
   "d": {
     "BACKEND_PORT": "4000",
@@ -111,7 +116,12 @@ yarn build
   "p": {
     "BACKEND_PORT": "4300",
     "ENV": "production",
+    "NODE_ENV": "production",
     "PORT": "3300"
+  },
+  "z": {
+    "ANALYZE": true,
+    "ENV": "analyze"
   }
 }
 ```
@@ -167,6 +177,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://bstefanski.com/"><img src="https://avatars.githubusercontent.com/u/28964599?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Bart Stefanski</b></sub></a><br /><a href="https://github.com/Blazity/next-saas-starter/commits?author=bmstefanski" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/ilasota"><img src="https://avatars.githubusercontent.com/u/34578189?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Igor Lasota</b></sub></a><br /><a href="https://github.com/Blazity/next-saas-starter/commits?author=ilasota" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/jbryn"><img src="https://avatars.githubusercontent.com/u/52970664?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Jan Bryński</b></sub></a><br /><a href="https://github.com/Blazity/next-saas-starter/commits?author=jbryn" title="Code">💻</a></td>
   </tr>
 </table>
 <!-- markdownlint-enable MD033 -->
