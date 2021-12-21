@@ -368,16 +368,26 @@ $RECYCLE.BIN/
 
 ### Custom ###
 
-**/temp/
-**/tmp/
+bak/
+temp/
+tmp/
 
-**/*_bak
-**/*.bak
-**/*.bak.*
-**/*.local
-**/*.local.*
-**/*.swo
-**/*.swp
+*.bak
+*.bak.*
+*.local
+*.local.*
+*.swo
+*.swp
+*.temp
+*.temp.*
+*.tmp
+*.tmp.*
+*_bak
+*_temp
+*_tmp
+
+.env
+.env-cmdrc
 
 /.backup/
 /.config/
@@ -386,6 +396,3 @@ $RECYCLE.BIN/
 /instrumented/
 /out/
 /target/
-/target/
-
-/.env-cmdrc
