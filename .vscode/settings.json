@@ -14,9 +14,9 @@
   },
 
   "[markdown]": {
-    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  
+
   "cSpell.ignorePaths": [
     "**/.git/",
     "**/.pnp.*",
@@ -24,29 +24,15 @@
     "**/.yarn",
     "**/bower_components",
     "**/node_modules",
-    "**/node_modules/",
     "**/package-lock.json",
-    "**/package-lock.json",
-    "**/src/posts/*.mdx",
+    "**/posts/*.mdx",
     "**/vscode-extension",
-    "**/yarn.lock",
+    "**/yarn.lock"
   ],
-  "cSpell.words": [
-    "Blazity",
-    "ccompli",
-    "ccustom",
-    "cmdrc",
-    "corejs",
-    "fullpagejs",
-    "nextjs",
-    "reactjs",
-    "svgr",
-    "swiper",
-    "Vercel"
-  ],
+  "cSpell.words": ["Blazity", "ccompli", "ccustom", "cmdrc", "corejs", "fullpagejs", "nextjs", "reactjs", "svgr", "swiper", "Vercel"],
   "editor.codeActionsOnSave": {
     "source.fixAll": false,
-    "source.fixAll.eslint": true,
+    "source.fixAll.eslint": true
   },
   "editor.comments.insertSpace": true,
   "editor.formatOnSave": true,
@@ -59,17 +45,7 @@
   "eslint.format.enable": true,
   "eslint.lintTask.enable": true,
   "eslint.packageManager": "yarn",
-  "eslint.probe": [
-    "css",
-    "html",
-    "javascript",
-    "javascriptreact",
-    "json",
-    "jsonc",
-    "markdown",
-    "typescript",
-    "typescriptreact"
-  ],
+  "eslint.probe": ["css", "html", "javascript", "javascriptreact", "json", "jsonc", "markdown", "typescript", "typescriptreact"],
   "licenser.author": "Blazity",
   "licenser.disableAutoHeaderInsertion": true,
   "licenser.license": "MIT",
@@ -79,17 +55,6 @@
     "README.md": ["## Table Of Contents"]
   },
   "markdownlint.ignore": ".markdownlintignore",
-  "search.exclude": {
-    "**/*.code-search": true,
-    "**/*.svg": true,
-    "**/.git": true,
-    "**/.pnp.*": true,
-    "**/.settings": true,
-    "**/.yarn": true,
-    "**/bower_components": true,
-    "**/node_modules": true,
-    "**/package-lock.json": true,
-    "**/yarn.lock": true
-  },
+  "markdownlint.run": "onSave",
   "typescript.tsdk": "node_modules/typescript/lib"
 }
