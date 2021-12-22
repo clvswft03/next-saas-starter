@@ -1,4 +1,27 @@
 {
-  "presets": ["next/babel"],
-  "plugins": [["styled-components", { "ssr": true, "displayName": true, "preprocess": false }]]
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "loose": false,
+        "modules": false,
+        "exclude": [
+          "@babel/plugin-transform-async-to-generator",
+          "@babel/plugin-transform-regenerator"
+        ],
+        "useBuiltIns": "entry",
+        "corejs": "3.20"
+      }
+    ],
+    "@babel/preset-typescript",
+    "@babel/preset-react",
+    "next/babel"
+  ],
+  "plugins": [
+    ["@babel/plugin-proposal-class-properties", { "loose": false }],
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-transform-runtime", { "helpers": true }],
+    ["module-resolver", { "alias": { "@": "./src" } }],
+    ["styled-components", { "ssr": true, "displayName": true, "preprocess": false }]
+  ]
 }

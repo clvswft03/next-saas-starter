@@ -1,26 +1,95 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "workbench.colorCustomizations": {
-    "activityBar.activeBackground": "#d258c6",
-    "activityBar.activeBorder": "#c3d04f",
-    "activityBar.background": "#d258c6",
-    "activityBar.foreground": "#15202b",
-    "activityBar.inactiveForeground": "#15202b99",
-    "activityBarBadge.background": "#c3d04f",
-    "activityBarBadge.foreground": "#15202b",
-    "statusBar.background": "#c334b5",
-    "statusBar.foreground": "#e7e7e7",
-    "statusBarItem.hoverBackground": "#d258c6",
-    "titleBar.activeBackground": "#c334b5",
-    "titleBar.activeForeground": "#e7e7e7",
-    "titleBar.inactiveBackground": "#c334b599",
-    "titleBar.inactiveForeground": "#e7e7e799",
-    "editorGroup.border": "#d258c6",
-    "panel.border": "#d258c6",
-    "sash.hoverBorder": "#d258c6",
-    "sideBar.border": "#d258c6",
-    "statusBarItem.remoteBackground": "#c334b5",
-    "statusBarItem.remoteForeground": "#e7e7e7"
+  "[css][html][json][jsonc][scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
-  "peacock.color": "#c334b5"
+  "[javascript][javascriptreact][plaintext][typescript][typescriptreact]": {
+    "editor.formatOnSave": false
+  },
+  "[markdown][plaintext]": {
+    "editor.quickSuggestions": false,
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 90
+  },
+
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+  },
+  
+  "cSpell.ignorePaths": [
+    "**/.git/",
+    "**/.pnp.*",
+    "**/.settings",
+    "**/.yarn",
+    "**/bower_components",
+    "**/node_modules",
+    "**/node_modules/",
+    "**/package-lock.json",
+    "**/package-lock.json",
+    "**/src/posts/*.mdx",
+    "**/vscode-extension",
+    "**/yarn.lock",
+  ],
+  "cSpell.words": [
+    "Blazity",
+    "ccompli",
+    "ccustom",
+    "cmdrc",
+    "corejs",
+    "fullpagejs",
+    "nextjs",
+    "reactjs",
+    "svgr",
+    "swiper",
+    "Vercel"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": false,
+    "source.fixAll.eslint": true,
+  },
+  "editor.comments.insertSpace": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "editor.insertSpaces": true,
+  "editor.rulers": [140],
+  "editor.tabSize": 2,
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 140,
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "eslint.packageManager": "yarn",
+  "eslint.probe": [
+    "css",
+    "html",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "markdown",
+    "typescript",
+    "typescriptreact"
+  ],
+  "licenser.author": "Blazity",
+  "licenser.disableAutoHeaderInsertion": true,
+  "licenser.license": "MIT",
+  "licenser.projectName": "next-saas-starter",
+  "markdown.extension.toc.levels": "2..6",
+  "markdown.extension.toc.omittedFromToc": {
+    "README.md": ["## Table Of Contents"]
+  },
+  "markdownlint.ignore": ".markdownlintignore",
+  "search.exclude": {
+    "**/*.code-search": true,
+    "**/*.svg": true,
+    "**/.git": true,
+    "**/.pnp.*": true,
+    "**/.settings": true,
+    "**/.yarn": true,
+    "**/bower_components": true,
+    "**/node_modules": true,
+    "**/package-lock.json": true,
+    "**/yarn.lock": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

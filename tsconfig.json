@@ -11,11 +11,31 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": ".",
-    "incremental": true
+    "incremental": true,
+
+    "experimentalDecorators": true,
+    "removeComments": true,
+    "sourceMap": true,
+    // With Babel
+    // REF: https://www.typescriptlang.org/docs/handbook/babel-with-typescript.html
+    // Ensure that .d.ts files are created by tsc, but not .js files
+    "declaration": true,
+    // "emitDeclarationOnly": true,
+    // Ensure that Babel can safely transpile files in the TypeScript project
+    "isolatedModules": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": [
+    ".github",
+    ".husky",
+    ".next",
+    ".yarn",
+    "build",
+    "cypress",
+    "dist",
+    "node_modules",
+    "public",
+  ]
 }

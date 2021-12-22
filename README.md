@@ -1,3 +1,6 @@
+# Next Saas Starter
+
+<!-- markdownlint-disable MD033 -->
 <br/>
 <p align="center">
 
@@ -30,13 +33,13 @@
 
 <p align="center"><b>Created with :heart:  at Blazity </b></p>
 <p align="center"><a href="https://blazity.com/">Blazity</a> is a group of Next.js/Jamstack/Headless experts. Contact us at <a href="mailto:contact@blazity.com">contact@blazity.com</a> if you’d like to talk about your project or just to have a chat with us :grin:</p>
-
+<!-- markdownlint-enable MD033 -->
 
 ## Table Of Contents
 
-- [Table Of Contents](#table-of-contents)
 - [🤩 Features](#-features)
 - [🚀 Getting Started](#-getting-started)
+- [One click deploy](#one-click-deploy)
 - [🧰 Built With](#-built-with)
 - [🤲🏻 Contributing](#-contributing)
   - [Creating A Pull Request](#creating-a-pull-request)
@@ -65,7 +68,7 @@
 - Adjust the template to your needs (and checkout `env.ts` file)
 - Deploy the project on [Vercel](https://vercel.com/) **don't forget to add env variables**
 
-```
+```sh
 # run the dev mode
 $ yarn dev 
 
@@ -74,6 +77,43 @@ yarn start
 
 # build the app
 yarn build
+```
+
+- [env-cmd](https://www.npmjs.com/package/env-cmd) provides environment variables of multiple environments to the scripts of [package.json](./package.json).
+- It can be used in combination with [cross-env](https://www.npmjs.com/package/cross-env).
+- Below is an example of [.env-cmdrc](.env-cmdrc) (property names are shortened to simplify it on the script)
+
+```json
+{
+  "c": {
+    "APP_NAME": "next-saas-starter",
+    "ENV": "common"
+  },
+  "a": {
+    "ANALYZE": true,
+    "ENV": "analyze"
+  },
+  "d": {
+    "BACKEND_PORT": "4000",
+    "ENV": "development",
+    "PORT": "3000"
+  },
+  "t": {
+    "BACKEND_PORT": "4100",
+    "ENV": "test",
+    "PORT": "3100"
+  },
+  "ci": {
+    "BACKEND_PORT": "4200",
+    "CI": true,
+    "PORT": "3200"
+  },
+  "p": {
+    "BACKEND_PORT": "4300",
+    "ENV": "production",
+    "PORT": "3300"
+  }
+}
 ```
 
 ## One click deploy
@@ -86,11 +126,9 @@ Clone the repository and one-click deploy to Netlify for free!
 
 [![Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Blazity/next-saas-starter)
 
-
-
 ## 🧰 Built With
 
-- Statically generated pages with [**Next.js** ](https://github.com/vercel/next.js)
+- Statically generated pages with [**Next.js**](https://github.com/vercel/next.js)
 - [Styled components](https://github.com/styled-components/styled-components/)
 - [MDX](https://github.com/mdx-js/mdx)
 - [TypeScript](https://github.com/Microsoft/TypeScript)
@@ -113,9 +151,10 @@ Contributions are what make the open source community such an amazing place to b
 ## 😎 Acknowledgements
 
 Big thanks to authors of these libraries:
-- https://github.com/neg4n/next-api-og-image - generating open graph images 
-- https://github.com/blazity/nextjs-color-mode - non-flickering dark mode
-- https://github.com/Brew-Brew/css-in-js-media - a convenient way of creating media queries
+
+- <https://github.com/neg4n/next-api-og-image> - generating open graph images
+- <https://github.com/blazity/nextjs-color-mode> - non-flickering dark mode
+- <https://github.com/Brew-Brew/css-in-js-media> - a convenient way of creating media queries
 
 ## ✨ Contributors
 
@@ -123,17 +162,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
+<!-- markdownlint-disable MD033 -->
 <table>
   <tr>
     <td align="center"><a href="https://bstefanski.com/"><img src="https://avatars.githubusercontent.com/u/28964599?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Bart Stefanski</b></sub></a><br /><a href="https://github.com/Blazity/next-saas-starter/commits?author=bmstefanski" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/ilasota"><img src="https://avatars.githubusercontent.com/u/34578189?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Igor Lasota</b></sub></a><br /><a href="https://github.com/Blazity/next-saas-starter/commits?author=ilasota" title="Code">💻</a></td>
   </tr>
 </table>
-
-<!-- markdownlint-restore -->
+<!-- markdownlint-enable MD033 -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

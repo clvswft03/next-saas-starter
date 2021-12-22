@@ -45,6 +45,7 @@ export default function SingleArticlePage(props: InferGetStaticPropsType<typeof 
     <>
       <Head>
         <noscript>
+          {/* eslint-disable-next-line @next/next/no-css-tags */}
           <link rel="stylesheet" href="/prism-theme.css" />
         </noscript>
       </Head>

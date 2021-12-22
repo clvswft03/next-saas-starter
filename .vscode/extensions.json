@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+    "streetsidesoftware.code-spell-checker",
+    "sonarsource.sonarlint-vscode",
+    "jock.svg",
+    "styled-components.vscode-styled-components",
+    "davidanson.vscode-markdownlint",
+    "ymotongpoo.licenser",
+    "yzhang.markdown-all-in-one"
+  ]
+}

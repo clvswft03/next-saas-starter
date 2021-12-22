@@ -1,11 +1,38 @@
 {
-  "parser": "@typescript-eslint/parser",
-  "extends": ["react-app", "prettier", "plugin:react/recommended", "next/core-web-vitals"],
-  "env": {
-    "es6": true
-  },
+  "root": true,
+  "extends": [
+    "plugin:chai-friendly/recommended",
+    "plugin:cypress/recommended",
+    "react-app",
+    "prettier",
+    "plugin:react/recommended",
+    "next/core-web-vitals"
+  ],
   "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
     "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    },
+    "react": {
+      "version": "detect"
+    }
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "JQuery": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "fullpage_api": "readonly"
   },
   "rules": {
     "react/prop-types": 0,
@@ -33,7 +60,7 @@
         "alphabetize": {
           "order": "asc",
           "caseInsensitive": true
-        }
+      }
       }
     ]
   }

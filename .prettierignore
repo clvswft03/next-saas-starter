@@ -1,0 +1,9 @@
+**/*.esignore.*
+**/*.tsbuildinfo
+
+.next/
+.yarn/
+node_modules/
+public/
+
+.pnp.*
