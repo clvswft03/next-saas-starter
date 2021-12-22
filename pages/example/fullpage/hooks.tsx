@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 // NOTE: if using fullpage extensions/plugins put them here and pass it as props.
@@ -18,21 +18,8 @@ interface OriginalPage {
   id?: string;
 }
 
-const originalColors = [
-    `#ff5f45`,
-    `#0798ec`,
-    `#fc6c7c`,
-    `#435b71`,
-    `orange`,
-    `blue`,
-    `purple`,
-    `yellow`,
-  ],
-  originalPages: OriginalPage[] = [
-    { text: `Section 1` },
-    { text: `Section 2` },
-    { text: `Section 3` },
-  ];
+const originalColors = [`#ff5f45`, `#0798ec`, `#fc6c7c`, `#435b71`, `orange`, `blue`, `purple`, `yellow`],
+  originalPages: OriginalPage[] = [{ text: `Section 1` }, { text: `Section 2` }, { text: `Section 3` }];
 
 const Hooks = () => {
   const [sectionsColor, setsectionsColor] = useState([...originalColors]),
@@ -44,8 +31,7 @@ const Hooks = () => {
       // with the event
     },
     handleChangeColors = () => {
-      const newColors =
-        sectionsColor[0] === `yellow` ? [...originalColors] : [`yellow`, `blue`, `white`];
+      const newColors = sectionsColor[0] === `yellow` ? [...originalColors] : [`yellow`, `blue`, `white`];
       return setsectionsColor(newColors);
     },
     handleAddSection = () => {

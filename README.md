@@ -70,7 +70,7 @@
 
 ```sh
 # run the dev mode
-$ yarn dev 
+$ yarn dev
 
 # run the prod mode
 yarn start

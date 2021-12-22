@@ -53,7 +53,7 @@
         "alphabetize": {
           "order": "asc",
           "caseInsensitive": true
-      }
+        }
       }
     ]
   }
