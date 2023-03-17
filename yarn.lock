@@ -8876,16 +8876,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-import-resolver-babel-module@npm:5.3.1":
-  version: 5.3.1
-  resolution: "eslint-import-resolver-babel-module@npm:5.3.1"
+"eslint-import-resolver-babel-module@npm:5.3.2":
+  version: 5.3.2
+  resolution: "eslint-import-resolver-babel-module@npm:5.3.2"
   dependencies:
     pkg-up: ^3.1.0
     resolve: ^1.20.0
   peerDependencies:
     "@babel/core": ^7.0.0-0
-    babel-plugin-module-resolver: ^3.0.0 || ^4.0.0
-  checksum: cd26740e9b9b7bb12667aabcc5c3e0e39a401b32b2890dfc4fd2444a00910f7e23fdb65cbb6084b026ade43899f824a2c762ce6078f5eb977762b8dda31aca1a
+    babel-plugin-module-resolver: ^3.0.0 || ^4.0.0 || ^5.0.0
+  checksum: 6c9b941860cae665d514f0b42743e869394f19031247ca1a5433f1723952196002ac3dc949e83cacc64a0d49f56bcef01fa36fa12f8adce28b242f7022744d04
   languageName: node
   linkType: hard
 
@@ -14240,7 +14240,7 @@ __metadata:
     eslint: ^7.32.0
     eslint-config-next: ^11.1.2
     eslint-config-prettier: ^8.3.0
-    eslint-import-resolver-babel-module: 5.3.1
+    eslint-import-resolver-babel-module: 5.3.2
     eslint-plugin-chai-friendly: 0.7.2
     eslint-plugin-cypress: 2.12.1
     eslint-plugin-import: ^2.24.2
