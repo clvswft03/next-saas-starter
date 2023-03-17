@@ -2926,10 +2926,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sideway/formula@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "@sideway/formula@npm:3.0.0"
-  checksum: 8ae26a0ed6bc84f7310be6aae6eb9d81e97f382619fc69025d346871a707eaab0fa38b8c857e3f0c35a19923de129f42d35c50b8010c928d64aab41578580ec4
+"@sideway/formula@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "@sideway/formula@npm:3.0.1"
+  checksum: e4beeebc9dbe2ff4ef0def15cec0165e00d1612e3d7cea0bc9ce5175c3263fc2c818b679bd558957f49400ee7be9d4e5ac90487e1625b4932e15c4aa7919c57a
   languageName: node
   linkType: hard
 
@@ -5876,12 +5876,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^0.21.1, axios@npm:^0.21.4":
+"axios@npm:^0.21.4":
   version: 0.21.4
   resolution: "axios@npm:0.21.4"
   dependencies:
     follow-redirects: ^1.14.0
   checksum: 44245f24ac971e7458f3120c92f9d66d1fc695e8b97019139de5b0cc65d9b8104647db01e5f46917728edfc0cfd88eb30fc4c55e6053eef4ace76768ce95ff3c
+  languageName: node
+  linkType: hard
+
+"axios@npm:^0.25.0":
+  version: 0.25.0
+  resolution: "axios@npm:0.25.0"
+  dependencies:
+    follow-redirects: ^1.14.7
+  checksum: 2a8a3787c05f2a0c9c3878f49782357e2a9f38945b93018fb0c4fd788171c43dceefbb577988628e09fea53952744d1ecebde234b561f1e703aa43e0a598a3ad
   languageName: node
   linkType: hard
 
@@ -9807,6 +9816,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"follow-redirects@npm:^1.14.7":
+  version: 1.15.2
+  resolution: "follow-redirects@npm:1.15.2"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: faa66059b66358ba65c234c2f2a37fcec029dc22775f35d9ad6abac56003268baf41e55f9ee645957b32c7d9f62baf1f0b906e68267276f54ec4b4c597c2b190
+  languageName: node
+  linkType: hard
+
 "for-in@npm:^1.0.2":
   version: 1.0.2
   resolution: "for-in@npm:1.0.2"
@@ -11844,16 +11863,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"joi@npm:^17.4.0":
-  version: 17.5.0
-  resolution: "joi@npm:17.5.0"
+"joi@npm:^17.6.0":
+  version: 17.8.4
+  resolution: "joi@npm:17.8.4"
   dependencies:
     "@hapi/hoek": ^9.0.0
     "@hapi/topo": ^5.0.0
     "@sideway/address": ^4.1.3
-    "@sideway/formula": ^3.0.0
+    "@sideway/formula": ^3.0.1
     "@sideway/pinpoint": ^2.0.0
-  checksum: 6a20d009d2fa8a72dbfd9bc739d240f678b09d3a16c05b4bfb4e2d0503e60f7d7914250f0bfc52fb79a537490739ba36a1ace00a05b8ddecaaacfcedafc5c8b9
+  checksum: 45a71d0c7a468aa931b9c08cd712b52bb0270c47527fe2075037b09787076febe1cf538fe052e220d23e9ec72ced9bc20963bb9cc63439443149725aebc4e636
   languageName: node
   linkType: hard
 
@@ -14280,7 +14299,7 @@ __metadata:
     url-loader: ^4.1.1
     use-clipboard-copy: ^0.2.0
     use-resize-observer: ^8.0.0
-    wait-on: 6.0.0
+    wait-on: 6.0.1
     webpack: ^5.65.0
   languageName: unknown
   linkType: soft
@@ -16898,6 +16917,15 @@ __metadata:
   dependencies:
     tslib: ~2.1.0
   checksum: 6b33172a760dcad6882fdc836ee8cf1ebe160dd7eaad95c45a12338ffdaa96eb41e48e6c25bbd3d1fdf45075949ff447954bc17a9d01c688558a67967d09c114
+  languageName: node
+  linkType: hard
+
+"rxjs@npm:^7.5.4":
+  version: 7.8.0
+  resolution: "rxjs@npm:7.8.0"
+  dependencies:
+    tslib: ^2.1.0
+  checksum: 61b4d4fd323c1043d8d6ceb91f24183b28bcf5def4f01ca111511d5c6b66755bc5578587fe714ef5d67cf4c9f2e26f4490d4e1d8cabf9bd5967687835e9866a2
   languageName: node
   linkType: hard
 
@@ -19710,18 +19738,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wait-on@npm:6.0.0":
-  version: 6.0.0
-  resolution: "wait-on@npm:6.0.0"
+"wait-on@npm:6.0.1":
+  version: 6.0.1
+  resolution: "wait-on@npm:6.0.1"
   dependencies:
-    axios: ^0.21.1
-    joi: ^17.4.0
+    axios: ^0.25.0
+    joi: ^17.6.0
     lodash: ^4.17.21
     minimist: ^1.2.5
-    rxjs: ^7.1.0
+    rxjs: ^7.5.4
   bin:
     wait-on: bin/wait-on
-  checksum: 6ae7bd2a933715c3b2f1c49f033d97c576b2c6a0257420d4c83964d2846c3967bfce33bc9af9a1a631ef38dfa6185be03cef57d2867c8c30c523278f964ac9e3
+  checksum: e4d62aa4145d99fe34747ccf7506d4b4d6e60dd677c0eb18a51e316d38116ace2d194e4b22a9eb7b767b0282f39878ddcc4ae9440dcb0c005c9150668747cf5b
   languageName: node
   linkType: hard
 
