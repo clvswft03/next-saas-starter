@@ -14370,13 +14370,13 @@ __metadata:
   linkType: hard
 
 "nextjs-color-mode@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "nextjs-color-mode@npm:1.0.4"
+  version: 1.0.5
+  resolution: "nextjs-color-mode@npm:1.0.5"
   peerDependencies:
     next: ">=9.0.0"
     react: ">=16.0.0"
     react-dom: ">=16.0.0"
-  checksum: 79444f30f1e7e4dab310cdda6a15511aa4b94ac0c6c72c3bb94a560736058c8d0c78e8674b18dc6e1414fc5caafa586190d55082215e1c14429462758c259910
+  checksum: b6159d3054c8737570a42639f6f5374deea1ac04c66346c30af1bcbdafc711eb1f6a54c957ab63d3142240bd9141486afb719d7d8cce0316b0fea89c635c11b6
   languageName: node
   linkType: hard
 
