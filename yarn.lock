@@ -2021,13 +2021,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fullpage/react-fullpage@npm:0.1.19":
-  version: 0.1.19
-  resolution: "@fullpage/react-fullpage@npm:0.1.19"
+"@fullpage/react-fullpage@npm:0.1.37":
+  version: 0.1.37
+  resolution: "@fullpage/react-fullpage@npm:0.1.37"
   dependencies:
     "@babel/polyfill": ^7.2.5
-    fullpage.js: ^3.1.0
-  checksum: 43320e9264a09ce52019865b00c6c0eb98ffbe13bf795a7d88732d7705fb9d6495b5b52f42dae70e0742a935be5e9c4c4a268cf186d49e2fe80caa52883b623c
+    fullpage.js: ^4.0.19
+  checksum: 1c71126712cf5f73438bf9f16f74233bac19438a183620b8a732e3cbeb1045c9c0ed70781702c8dd2b2277d8f8c08123655fadb42aeac7d1bba81848b9a0839b
   languageName: node
   linkType: hard
 
@@ -9945,10 +9945,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fullpage.js@npm:^3.1.0":
-  version: 3.1.2
-  resolution: "fullpage.js@npm:3.1.2"
-  checksum: 73cfa26ac2a636ad98baf03e8afa7bcf0358659c6c71aaa4871a8ce2a9f04baf2f502a59b585122bb11ea2fba4ac94cc082e528cce939804d9414066eba25e66
+"fullpage.js@npm:^4.0.19":
+  version: 4.0.19
+  resolution: "fullpage.js@npm:4.0.19"
+  checksum: 78172415ebc548423f4908a0dce1df8be09132da0d559434763c86214f838c0f67c70263d8838ef10ac12ace6f2af44e04c76d00b52c9d0f945351af5de5ba04
   languageName: node
   linkType: hard
 
@@ -14211,7 +14211,7 @@ __metadata:
     "@commitlint/cli": ^15.0.0
     "@commitlint/config-conventional": ^15.0.0
     "@fec/remark-a11y-emoji": ^3.1.0
-    "@fullpage/react-fullpage": 0.1.19
+    "@fullpage/react-fullpage": 0.1.37
     "@n8tb1t/use-scroll-position": ^2.0.3
     "@next/bundle-analyzer": ^11.1.2
     "@next/eslint-plugin-next": 12.0.7

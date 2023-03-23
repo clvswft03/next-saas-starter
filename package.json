@@ -97,7 +97,7 @@
   "dependencies": {
     "@accessible/drawer": "^3.0.2",
     "@babel/runtime": "7.16.5",
-    "@fullpage/react-fullpage": "0.1.19",
+    "@fullpage/react-fullpage": "0.1.37",
     "@n8tb1t/use-scroll-position": "^2.0.3",
     "@sendgrid/mail": "^7.4.7",
     "@svgr/webpack": "^5.5.0",
